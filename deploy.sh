@@ -39,6 +39,6 @@ printf '%s\n' "$DOMAIN" > "$tmpdir/CNAME"
 )
 
 echo "▸ Pushing to $BRANCH..."
-git -C "$tmpdir" push -f "https://github.com/$REPO.git" "HEAD:$BRANCH"
+git -C "$tmpdir" push -f "git@github.com:$REPO.git" "HEAD:$BRANCH"
 
 echo "✓ Deployed. Live at https://$DOMAIN/"

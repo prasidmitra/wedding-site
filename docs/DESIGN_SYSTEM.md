@@ -24,12 +24,12 @@ Semantic aliases (`--bg`, `--surface`, `--text`, `--text-soft`, `--line`, `--acc
 
 ## Typography
 
-Two families, loaded via `next/font` and exposed as `--font-cormorant` / `--font-inter`.
+Two families, loaded via `next/font` and exposed as `--font-cormorant` / `--font-ebgaramond`.
 
 | Role            | Family             | Notes                                        |
 | --------------- | ------------------ | -------------------------------------------- |
 | Display         | Cormorant Garamond | weights 300/400/500; italic for romance      |
-| UI / body       | Inter              | small labels uppercase + `letter-spacing`    |
+| Body / UI       | EB Garamond        | serif body; small labels uppercase + `letter-spacing` |
 
 Fluid display scale via `clamp()`:
 

@@ -1,6 +1,8 @@
 # Asset Guide
 
-The site currently runs on **aspect-correct SVG placeholders**. Final AI-generated artwork drops into the same paths with no code changes, the layout, responsive composition and animation are already built around the expected ratios.
+Final artwork is now in place for the **intro portraits, Sangeet, Haldi and Wedding** (transparent PNGs, wired into their components). What remains on **aspect-correct SVG placeholders** are the **Varmala** centrepiece and the **venue photos**. Final assets drop into the same paths with no code changes, the layout, responsive composition and animation are already built around the expected ratios.
+
+> Note: final files are `.png`, not `.webp` (the table below was written before generation; treat the *paths* as authoritative and the extension as `.png`).
 
 ## Placeholder → final asset map
 
@@ -33,9 +35,11 @@ public/
 
 ## Style reference (use verbatim in every prompt)
 
-> Refined editorial wedding illustration, subtle hand-painted gouache/watercolor texture, elegant clean linework, realistic recognizable faces, sophisticated proportions, premium Indian fashion editorial feeling.
+> Flat vector wedding illustration, matte finish, no gradients, no shading, no 3D, no photorealism, elegant clean linework, limited hex colour palette, premium Indian fashion editorial feeling.
 
-**Always avoid:** Pixar, Disney, anime, chibi, 3D cartoon, children's-book character style, exaggerated eyes, caricature, plastic skin, generic stock-couple faces.
+**Always avoid:** Pixar, Disney, anime, chibi, 3D cartoon, children's-book character style, exaggerated eyes, caricature, plastic skin, generic stock-couple faces, gradients, drop shadows, photographic realism.
+
+> ⚠️ Never write the word **"realistic"** in a prompt — it reliably triggers photorealistic output. Use **"flat, stylized, illustrated, not a photograph"** instead.
 
 ## Consistency workflow
 

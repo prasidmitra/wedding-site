@@ -10,7 +10,7 @@ Visual direction: **modern Bengali editorial luxury**, warm ivory, sindoor red, 
 - TypeScript
 - [Framer Motion](https://motion.dev) for scroll-driven motion
 - Plain CSS with design tokens (no Tailwind), see `src/app/globals.css`
-- Cormorant Garamond (display) + Inter (UI), self-hosted via `next/font`
+- Cormorant Garamond (display) + EB Garamond (body), both serif, self-hosted via `next/font`
 
 > Tailwind was deliberately omitted. The design is built around CSS custom properties and a bespoke editorial look; hand-written tokens kept the dependency surface small and gave finer control over the alpana/typography treatment. See `docs/DESIGN_SYSTEM.md`.
 
@@ -69,7 +69,11 @@ src/
 ├── data/                 # events.ts, traditions.ts, site.ts (single source of truth)
 └── lib/utils.ts
 public/
-├── illustrations/placeholders/   # aspect-correct SVG placeholders
+├── illustrations/
+│   ├── character-reference/      # final Tanuja + Prasid portraits (PNG)
+│   ├── sangeet/ haldi/ wedding/  # final couple illustrations (PNG, transparent)
+│   ├── placeholders/             # remaining stand-ins (varmala, venue)
+│   └── varmala/                  # reserved for varmala artwork
 ├── motifs/                       # paan-leaf, alpana-*, marigold, petal, conch
 └── photos/venue/
 ```
@@ -78,14 +82,14 @@ public/
 
 The public-facing experience is fully built and responsive. Everything is content-editable from `src/data/` and `src/app/globals.css`.
 
-- **Illustrations are placeholders**, elegant aspect-correct SVGs standing in for the AI-generated couple artwork. The exact replacement assets are documented in [`docs/ASSET_GUIDE.md`](docs/ASSET_GUIDE.md).
+- **Illustrations** — the intro portraits, Sangeet, Haldi and Wedding figures are final transparent PNGs and are wired in. The **Varmala** centrepiece and **venue photos** are still aspect-correct SVG placeholders. See [`docs/ASSET_GUIDE.md`](docs/ASSET_GUIDE.md) and [`CLAUDE.md`](CLAUDE.md) for the remaining assets and the image-processing workflow.
 - **RSVP form is a shell**, the full UX is implemented (conditional fields, validation, success state) but not yet connected to a backend.
 - **Admin & gallery** are placeholders for later phases.
 
 ## Roadmap
 
 1. ✅ Design system, hero, full event narrative, sunset scroll sequence, venue, guide, RSVP shell, footer.
-2. 🔜 Swap placeholder artwork for final illustrations (`docs/ASSET_GUIDE.md`).
+2. 🔜 Generate the remaining artwork — Varmala (desktop + mobile) and venue photos (`docs/ASSET_GUIDE.md`).
 3. 🔜 RSVP persistence + private `/admin` dashboard.
 4. 🔜 Guest photo upload / moderation / mosaic gallery.
 5. 🔜 Polish pass, device matrix, reduced-motion audit, Core Web Vitals.

@@ -31,13 +31,15 @@ npm run typecheck  # tsc --noEmit
 
 ## Deploying to GitHub Pages
 
-The site is live at **https://prasidmitra.github.io/wedding-site/** (repo: `prasidmitra/wedding-site`, public). It is served from the `gh-pages` branch, which holds the contents of `out/`.
+The site is live at **https://prasidandtanuja.xyz/** (custom domain; repo `prasidmitra/wedding-site`, public). It is served from the `gh-pages` branch, which holds the contents of `out/`.
 
 ```bash
-npm run deploy      # builds with the /wedding-site base path and pushes out/ to gh-pages
+npm run deploy      # builds (root-relative) and pushes out/ to gh-pages
 ```
 
-Because this is a GitHub *project* page (served under `/wedding-site/`, not a custom domain), all asset URLs are prefixed with `/wedding-site` via `NEXT_PUBLIC_BASE_PATH` — handled automatically by `next.config.mjs` (for `_next/` assets and fonts) and `src/lib/asset.ts` (for raw `/public` images referenced with `assetPath()`). Local dev (`npm run dev`) is unaffected: the prefix is empty without that env var.
+The custom domain is declared in `public/CNAME` (`prasidandtanuja.xyz`), which Next.js copies into `out/` on export so the `gh-pages` branch always carries it — GitHub uses that file to keep the domain bound across the force-pushes `deploy.sh` does.
+
+Because the site is served from the domain root (not a project sub-path), it builds with an **empty base path** — `next.config.mjs` and `src/lib/asset.ts` still prefix with `NEXT_PUBLIC_BASE_PATH` when it is set, but that env var is unset for the live build. The older `/wedding-site/` sub-path prefixing is retained only for local `npm run dev` parity; it is not used in production.
 
 `git push` of the source lives on `main`; the built site lives on `gh-pages` (deploy script force-pushes it).
 

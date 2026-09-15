@@ -32,6 +32,7 @@ printf '%s\n' "$DOMAIN" > "$tmpdir/CNAME"
 (
   cd "$tmpdir"
   git init -q
+  git add -A
   git -c user.name="Prasid Mitra" \
       -c user.email="prasidmitra@users.noreply.github.com" \
       commit -q -m "Deploy to GitHub Pages"

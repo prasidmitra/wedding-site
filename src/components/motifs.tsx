@@ -19,18 +19,30 @@ export function PaanLeaf(props: P) {
 }
 
 export function AlpanaCircle(props: P) {
+  const n = 12;
   return (
     <svg viewBox="0 0 96 96" fill="none" stroke="currentColor" strokeWidth="1" aria-hidden {...props}>
-      <circle cx="48" cy="48" r="45" />
-      <circle cx="48" cy="48" r="33" strokeDasharray="1.5 6" />
-      <circle cx="48" cy="48" r="19" />
-      {Array.from({ length: 12 }).map((_, i) => {
-        const a = (i / 12) * Math.PI * 2;
-        const x = 48 + Math.cos(a) * 45;
-        const y = 48 + Math.sin(a) * 45;
-        return <circle key={i} cx={x} cy={y} r="1.6" fill="currentColor" stroke="none" />;
+      {/* outer lotus petals */}
+      {Array.from({ length: n }).map((_, i) => (
+        <g key={`p${i}`} transform={`rotate(${(i * 360) / n} 48 48)`}>
+          <path d="M48 43 C39 32 39 16 48 8 C57 16 57 32 48 43 Z" strokeLinejoin="round" />
+          <path d="M48 40 C45 31 45 19 48 12" strokeWidth="0.7" opacity="0.5" />
+        </g>
+      ))}
+      {/* inner petals, offset between the outer ring */}
+      {Array.from({ length: n }).map((_, i) => (
+        <g key={`pi${i}`} transform={`rotate(${(i * 360) / n + 15} 48 48)`}>
+          <path d="M48 39 C44.5 34 44.5 28 48 24 C51.5 28 51.5 34 48 39 Z" strokeLinejoin="round" />
+        </g>
+      ))}
+      {/* small dotted accents at the petal tips */}
+      {Array.from({ length: n }).map((_, i) => {
+        const a = ((i * 360) / n) * (Math.PI / 180);
+        const x = 48 + Math.sin(a) * 42;
+        const y = 48 - Math.cos(a) * 42;
+        return <circle key={`d${i}`} cx={x} cy={y} r="1.3" fill="currentColor" stroke="none" />;
       })}
-      <circle cx="48" cy="48" r="3" fill="currentColor" stroke="none" />
+      <circle cx="48" cy="48" r="4.5" fill="currentColor" stroke="none" />
     </svg>
   );
 }

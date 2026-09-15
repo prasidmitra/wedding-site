@@ -35,7 +35,7 @@ export function HaldiSection() {
 
         <Reveal delay={0.1} className="event__figure">
           <img
-            src={assetPath("/illustrations/placeholders/haldi-placeholder.svg")}
+            src={assetPath("/illustrations/haldi/couple-haldi.png")}
             alt="Illustrated Tanuja and Prasid at the Haldi"
             loading="lazy"
           />

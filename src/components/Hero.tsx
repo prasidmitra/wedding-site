@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { AlpanaCircle } from "@/components/motifs";
 import { rsvpHref, site } from "@/data/site";
 
 /**
@@ -17,10 +16,6 @@ function Fade({ delay = 0, children }: { delay?: number; children: React.ReactNo
 export function Hero() {
   return (
     <section className="hero">
-      <div className="hero__alpana" aria-hidden>
-        <AlpanaCircle />
-      </div>
-
       <div className="hero__content">
         <Fade>
           <div className="hero__dates">

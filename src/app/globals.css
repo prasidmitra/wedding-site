@@ -33,8 +33,8 @@
 
   /* Typography */
   --font-display: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
-  --font-body: var(--font-inter), "Inter", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, sans-serif;
+  --font-body: var(--font-ebgaramond), "EB Garamond", Georgia, "Times New Roman",
+    serif;
 
   /* Fluid type scale */
   --text-display-xl: clamp(3.25rem, 13vw, 10rem);
@@ -405,19 +405,6 @@ a {
   overflow: hidden;
 }
 
-.hero__alpana {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  display: grid;
-  place-items: center;
-}
-.hero__alpana svg {
-  width: min(150vw, 90rem);
-  opacity: 0.05;
-  color: var(--sindoor);
-}
-
 .hero__content {
   position: relative;
   z-index: 2;
@@ -728,8 +715,8 @@ a {
   max-width: 30rem;
   color: var(--text-soft);
 }
-.event--sangeet .event__copy p {
-  color: rgba(247, 240, 228, 0.72);
+.event--sangeet .event__copy p:not(.event__line):not(.kicker) {
+  color: rgba(247, 240, 228, 0.85);
 }
 .event__figure {
   display: flex;
@@ -737,7 +724,9 @@ a {
 }
 .event__figure img {
   width: min(78vw, 26rem);
-  height: auto;
+  height: min(72vh, 34rem);
+  object-fit: contain;
+  object-position: center bottom;
   filter: drop-shadow(0 40px 50px rgba(0, 0, 0, 0.25));
 }
 
@@ -822,7 +811,31 @@ a {
   max-width: min(100%, 46rem);
 }
 .evening__scene--wedding img {
-  max-width: min(100%, 24rem);
+  max-width: min(100%, 30rem);
+  max-height: 75vh;
+}
+
+/* Wedding block: text left, illustration right (matches Sangeet/Haldi) */
+.evening__wedding-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  width: 100%;
+}
+@media (min-width: 860px) {
+  .evening__wedding-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+  .evening__wedding-grid .evening__copy {
+    align-items: flex-start;
+    text-align: left;
+  }
+  .evening__wedding-grid .evening__line {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 /* Text lightens as the sky deepens */

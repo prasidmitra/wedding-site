@@ -7,7 +7,8 @@
     "dev": "next dev",
     "build": "next build",
     "preview": "npx --yes serve out",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "deploy": "./deploy.sh"
   },
   "dependencies": {
     "framer-motion": "^13.3.0",

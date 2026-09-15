@@ -29,6 +29,18 @@ npm run typecheck  # tsc --noEmit
 
 **This is a static site.** `npm run dev` is only a development convenience. The production artifact is the `out/` folder — plain HTML, CSS, JS, fonts and images — which needs **no Node server**. Deploy `out/` to any static host (Netlify, Vercel, GitHub Pages, Cloudflare Pages, S3, nginx…) as-is.
 
+## Deploying to GitHub Pages
+
+The site is live at **https://prasidmitra.github.io/wedding-site/** (repo: `prasidmitra/wedding-site`, public). It is served from the `gh-pages` branch, which holds the contents of `out/`.
+
+```bash
+npm run deploy      # builds with the /wedding-site base path and pushes out/ to gh-pages
+```
+
+Because this is a GitHub *project* page (served under `/wedding-site/`, not a custom domain), all asset URLs are prefixed with `/wedding-site` via `NEXT_PUBLIC_BASE_PATH` — handled automatically by `next.config.mjs` (for `_next/` assets and fonts) and `src/lib/asset.ts` (for raw `/public` images referenced with `assetPath()`). Local dev (`npm run dev`) is unaffected: the prefix is empty without that env var.
+
+`git push` of the source lives on `main`; the built site lives on `gh-pages` (deploy script force-pushes it).
+
 When RSVP persistence and the admin dashboard arrive later, they'll be wired to a small backend (serverless function or form service); the frontend stays static.
 
 ## Routes

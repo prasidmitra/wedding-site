@@ -191,6 +191,10 @@ a {
   margin-bottom: 1.25rem;
 }
 
+.weekend .section__head .display {
+  white-space: nowrap;
+}
+
 /* ------------------------------------------------------------
    5. Buttons
    ------------------------------------------------------------ */
@@ -547,6 +551,7 @@ a {
 }
 .intro__figures {
   --fig-h: clamp(20rem, 34vw, 34rem);
+  --overlap: clamp(1.75rem, 8vw, 3.5rem);
   position: relative;
   display: flex;
   align-items: flex-end;
@@ -559,10 +564,19 @@ a {
 .intro__figure {
   height: var(--fig-h);
   width: auto;
+  /* Pull the couple together: each portrait has transparent margin, so a
+     negative gap overlaps them into a side-by-side pair. Tanuja sits on top. */
+  margin-inline-end: calc(var(--overlap) * -1);
+  position: relative;
+  z-index: 2;
 }
 .intro__figure--right {
   height: calc(var(--fig-h) * 1.08); /* Prasid 8% taller */
   width: auto;
+  margin-inline-start: calc(var(--overlap) * -1);
+  margin-inline-end: 0;
+  position: relative;
+  z-index: 1; /* Prasid stands behind Tanuja */
 }
 .intro__sig {
   margin-top: 1.5rem;
@@ -684,6 +698,9 @@ a {
   gap: 2.5rem;
   align-items: center;
 }
+.event__copy {
+  text-align: center;
+}
 .event__copy .kicker {
   display: inline-block;
   margin-bottom: 1.1rem;
@@ -713,6 +730,7 @@ a {
 }
 .event__copy p:not(.event__line):not(.kicker) {
   max-width: 30rem;
+  margin-inline: auto;
   color: var(--text-soft);
 }
 .event--sangeet .event__copy p:not(.event__line):not(.kicker) {
@@ -734,6 +752,12 @@ a {
   .event__grid {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
+  }
+  .event__copy {
+    text-align: left;
+  }
+  .event__copy p:not(.event__line):not(.kicker) {
+    margin-inline: 0;
   }
   .event--flip .event__grid > :first-child {
     order: 2;

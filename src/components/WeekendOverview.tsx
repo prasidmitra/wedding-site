@@ -8,7 +8,7 @@ export function WeekendOverview() {
     <section className="section weekend" id="events">
       <div className="container">
         <Reveal>
-          <div className="section__head">
+          <div className="section__head section__head--center">
             <span className="kicker">{weekend.kicker}</span>
             <h2 className="display display--md">{weekend.title}</h2>
             <p className="lead">{weekend.description}</p>

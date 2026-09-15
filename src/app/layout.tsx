@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, EB_Garamond } from "next/font/google";
 import { Header } from "@/components/Header";
 import { FloatingRSVP } from "@/components/FloatingRSVP";
+import { ImageRetry } from "@/components/ImageRetry";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -54,6 +55,7 @@ export default function RootLayout({
     <html lang="en" className={`${cormorant.variable} ${ebGaramond.variable}`}>
       <body>
         <Header />
+        <ImageRetry />
         {children}
         <FloatingRSVP />
         <noscript>

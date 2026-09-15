@@ -40,8 +40,10 @@ export function SunsetSequence() {
 
                 <Reveal delay={0.1} className="evening__scene evening__scene--wedding">
                   <img
-                    src={assetPath("/illustrations/wedding/couple-wedding.png")}
+                    src={assetPath("/illustrations/wedding/couple-wedding.webp")}
                     alt="Illustrated Tanuja and Prasid at the wedding"
+                    width={552}
+                    height={1088}
                     loading="lazy"
                   />
                 </Reveal>

@@ -8,7 +8,8 @@
     "build": "next build",
     "preview": "npx --yes serve out",
     "typecheck": "tsc --noEmit",
-    "deploy": "./deploy.sh"
+    "deploy": "./deploy.sh",
+    "push": "./push.sh"
   },
   "dependencies": {
     "framer-motion": "^13.3.0",

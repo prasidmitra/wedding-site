@@ -35,8 +35,10 @@ export function SangeetSection() {
 
         <Reveal delay={0.1} className="event__figure">
           <img
-            src={assetPath("/illustrations/sangeet/couple-sangeet.png")}
+            src={assetPath("/illustrations/sangeet/couple-sangeet.webp")}
             alt="Illustrated Tanuja and Prasid at the Sangeet"
+            width={832}
+            height={1032}
             loading="lazy"
           />
         </Reveal>

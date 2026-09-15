@@ -6,6 +6,8 @@ const nextConfig = {
   output: "export",
   reactStrictMode: true,
   basePath,
+  // Stop `next dev`/`next build` from rewriting CLAUDE.md with its agent rules.
+  agentRules: false,
   images: {
     unoptimized: true,
   },

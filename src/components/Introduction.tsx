@@ -36,17 +36,21 @@ export function Introduction() {
 
         <div className="intro__figures" aria-label="Illustrated Tanuja and Prasid">
           <motion.img
-            src={assetPath("/illustrations/character-reference/tanuja.png")}
+            src={assetPath("/illustrations/character-reference/tanuja.webp")}
             alt="Illustrated Tanuja"
             className="intro__figure"
-            loading="lazy"
+            width={464}
+            height={1088}
+            fetchPriority="high"
             {...figure(true)}
           />
           <motion.img
-            src={assetPath("/illustrations/character-reference/prasid.png")}
+            src={assetPath("/illustrations/character-reference/prasid.webp")}
             alt="Illustrated Prasid"
             className="intro__figure intro__figure--right"
-            loading="lazy"
+            width={391}
+            height={1088}
+            fetchPriority="high"
             {...figure(false)}
           />
         </div>

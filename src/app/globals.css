@@ -1,0 +1,1230 @@
+/* ============================================================
+   Tanuja & Prasid — Modern Bengali Editorial Wedding
+   Design tokens + global styles
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   1. Design tokens
+   ------------------------------------------------------------ */
+:root {
+  /* Core palette */
+  --ivory: #f7f0e4;
+  --paper: #faf6ed;
+  --burgundy: #4a1115;
+  --burgundy-deep: #30080c;
+  --sindoor: #8f1d21;
+  --peach: #f2c09b;
+  --terracotta: #b95d49;
+  --turmeric: #e8b94f;
+  --haldi-cream: #faf1dd;
+  --gold: #c49a52;
+  --gold-soft: #d9b87a;
+  --charcoal: #27211e;
+  --ink: #3a2e27;
+
+  /* Semantic */
+  --bg: var(--ivory);
+  --surface: var(--paper);
+  --text: var(--charcoal);
+  --text-soft: rgba(39, 33, 30, 0.66);
+  --text-faint: rgba(39, 33, 30, 0.42);
+  --line: rgba(39, 33, 30, 0.14);
+  --accent: var(--sindoor);
+
+  /* Typography */
+  --font-display: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+  --font-body: var(--font-inter), "Inter", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, sans-serif;
+
+  /* Fluid type scale */
+  --text-display-xl: clamp(3.25rem, 13vw, 10rem);
+  --text-display-lg: clamp(2.6rem, 8.5vw, 6.75rem);
+  --text-display-md: clamp(2.1rem, 6vw, 4.5rem);
+  --text-display-sm: clamp(1.75rem, 4.5vw, 3rem);
+
+  /* Spacing */
+  --section-y: clamp(5rem, 14vh, 9rem);
+  --gutter: clamp(1.25rem, 5vw, 4rem);
+  --maxw: 76rem;
+
+  /* Effects */
+  --radius: 20px;
+  --shadow-card: 0 30px 60px -30px rgba(39, 33, 30, 0.35);
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ------------------------------------------------------------
+   2. Reset & base
+   ------------------------------------------------------------ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: 6rem;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+img,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: var(--sindoor);
+  color: var(--ivory);
+}
+
+:focus-visible {
+  outline: 2px solid var(--sindoor);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ------------------------------------------------------------
+   3. Typography helpers
+   ------------------------------------------------------------ */
+.display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.01em;
+}
+
+.display--xl {
+  font-size: var(--text-display-xl);
+}
+.display--lg {
+  font-size: var(--text-display-lg);
+}
+.display--md {
+  font-size: var(--text-display-md);
+}
+.display--sm {
+  font-size: var(--text-display-sm);
+}
+
+.display em {
+  font-style: italic;
+  font-weight: 300;
+}
+
+.kicker {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+}
+
+.lead {
+  font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+  line-height: 1.65;
+  color: var(--text-soft);
+  font-weight: 400;
+}
+
+/* ------------------------------------------------------------
+   4. Layout
+   ------------------------------------------------------------ */
+.container {
+  width: 100%;
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.section {
+  position: relative;
+  padding-block: var(--section-y);
+}
+
+.section__head {
+  max-width: 40rem;
+  margin-bottom: clamp(2.5rem, 6vw, 4.5rem);
+}
+
+.section__head--center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.section__head .kicker {
+  display: inline-block;
+  margin-bottom: 1.1rem;
+}
+
+.section__head .display {
+  margin-bottom: 1.25rem;
+}
+
+/* ------------------------------------------------------------
+   5. Buttons
+   ------------------------------------------------------------ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  padding: 0.95rem 1.9rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform 0.35s var(--ease), background-color 0.35s var(--ease),
+    color 0.35s var(--ease), border-color 0.35s var(--ease),
+    opacity 0.35s var(--ease);
+  white-space: nowrap;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn--solid {
+  background: var(--burgundy);
+  color: var(--ivory);
+}
+.btn--solid:hover {
+  background: var(--sindoor);
+}
+
+.btn--ivory {
+  background: var(--ivory);
+  color: var(--burgundy);
+}
+.btn--ivory:hover {
+  background: #fff;
+}
+
+.btn--outline {
+  border-color: currentColor;
+  background: transparent;
+}
+.btn--outline:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.btn--ghost {
+  border-color: var(--line);
+  color: var(--text);
+  background: transparent;
+}
+.btn--ghost:hover {
+  border-color: var(--text);
+}
+
+/* ------------------------------------------------------------
+   6. Header / navigation
+   ------------------------------------------------------------ */
+.header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 60;
+  transition: background-color 0.5s var(--ease), box-shadow 0.5s var(--ease),
+    backdrop-filter 0.5s var(--ease);
+}
+
+.header--scrolled {
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: saturate(140%) blur(14px);
+  -webkit-backdrop-filter: saturate(140%) blur(14px);
+  box-shadow: 0 1px 0 var(--line);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4.5rem;
+}
+
+.header__brand {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  letter-spacing: 0.01em;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.header__nav {
+  display: none;
+  align-items: center;
+  gap: 2rem;
+}
+
+.header__link {
+  position: relative;
+  font-size: 0.76rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  transition: color 0.3s var(--ease);
+}
+.header__link:hover {
+  color: var(--text);
+}
+.header__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.4rem;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width 0.3s var(--ease);
+}
+.header__link:hover::after {
+  width: 100%;
+}
+
+.header__cta {
+  padding: 0.7rem 1.5rem;
+  font-size: 0.72rem;
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Mobile menu toggle */
+.menu-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+}
+.menu-toggle__bar {
+  display: block;
+  width: 16px;
+  height: 1.5px;
+  background: currentColor;
+  position: relative;
+}
+.menu-toggle__bar::before,
+.menu-toggle__bar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 16px;
+  height: 1.5px;
+  background: currentColor;
+  transition: transform 0.3s var(--ease), top 0.3s var(--ease);
+}
+.menu-toggle__bar::before {
+  top: -5px;
+}
+.menu-toggle__bar::after {
+  top: 5px;
+}
+
+.menu-panel {
+  position: fixed;
+  inset: 0;
+  z-index: 55;
+  background: var(--paper);
+  padding: 6.5rem var(--gutter) 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.menu-panel a {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 8vw, 3rem);
+  color: var(--text);
+  padding-block: 0.5rem;
+}
+
+@media (min-width: 860px) {
+  .header__nav {
+    display: flex;
+  }
+  .menu-toggle,
+  .menu-panel {
+    display: none;
+  }
+}
+
+/* ------------------------------------------------------------
+   7. Hero
+   ------------------------------------------------------------ */
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 6rem var(--gutter) 3.5rem;
+  overflow: hidden;
+}
+
+.hero__alpana {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  display: grid;
+  place-items: center;
+}
+.hero__alpana svg {
+  width: min(150vw, 90rem);
+  opacity: 0.05;
+  color: var(--sindoor);
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.hero__dates {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  font-family: var(--font-body);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+}
+
+.hero__names {
+  font-size: var(--text-display-xl);
+}
+
+.hero__amp {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 0.62em;
+  color: var(--sindoor);
+  vertical-align: 0.18em;
+  margin-inline: 0.08em;
+}
+
+.hero__sub {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 3.4vw, 2rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--text-soft);
+}
+
+.hero__rule {
+  width: 2.5rem;
+  height: 1px;
+  background: var(--gold);
+  margin: 0.25rem 0;
+}
+
+.hero__venue {
+  font-size: 0.72rem;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--text-soft);
+}
+
+.hero__cta {
+  margin-top: 1.6rem;
+}
+
+.hero-fade {
+  animation: heroFade 1s var(--ease) both;
+}
+@keyframes heroFade {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--text-faint);
+  font-size: 0.64rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+.scroll-indicator__line {
+  width: 1px;
+  height: 2.8rem;
+  background: currentColor;
+  overflow: hidden;
+  position: relative;
+}
+.scroll-indicator__line::after {
+  content: "";
+  position: absolute;
+  top: -40%;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: var(--sindoor);
+  animation: scrollcue 2.4s var(--ease) infinite;
+}
+@keyframes scrollcue {
+  0% {
+    top: -40%;
+  }
+  60%,
+  100% {
+    top: 110%;
+  }
+}
+
+/* ------------------------------------------------------------
+   8. Introduction / couple
+   ------------------------------------------------------------ */
+.intro {
+  background: var(--paper);
+  position: relative;
+  overflow: hidden;
+}
+.intro__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  text-align: center;
+}
+.intro__copy .display {
+  margin-bottom: 1.4rem;
+}
+.intro__copy .lead {
+  max-width: 34rem;
+  margin-inline: auto;
+}
+.intro__figures {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  max-width: 30rem;
+  margin-inline: auto;
+  width: 100%;
+}
+.intro__figure {
+  width: 100%;
+  height: auto;
+  transform: translateX(-1.5rem);
+}
+.intro__figure--right {
+  transform: translateX(1.5rem);
+}
+.intro__sig {
+  margin-top: 1.5rem;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--sindoor);
+}
+
+@media (min-width: 860px) {
+  .intro__grid {
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+    gap: 4rem;
+  }
+  .intro__copy .lead {
+    margin-inline: 0;
+  }
+}
+
+/* ------------------------------------------------------------
+   9. Weekend overview
+   ------------------------------------------------------------ */
+.weekend {
+  background: var(--bg);
+}
+.weekend__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.weekend__item {
+  background: var(--paper);
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: left;
+  transition: background-color 0.4s var(--ease);
+}
+.weekend__item:hover {
+  background: var(--haldi-cream);
+}
+.weekend__item .kicker {
+  color: var(--sindoor);
+}
+.weekend__item .display {
+  font-size: 1.9rem;
+}
+.weekend__item p {
+  color: var(--text-soft);
+  font-size: 0.95rem;
+}
+
+@media (min-width: 720px) {
+  .weekend__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ------------------------------------------------------------
+   10. Event sections (Sangeet / Haldi)
+   ------------------------------------------------------------ */
+.event {
+  position: relative;
+  overflow: hidden;
+}
+
+.event--sangeet {
+  background: var(--burgundy-deep);
+  color: var(--ivory);
+}
+.event--sangeet .kicker {
+  color: var(--gold-soft);
+}
+.event--sangeet .lead,
+.event--sangeet p {
+  color: rgba(247, 240, 228, 0.72);
+}
+
+.event--haldi {
+  background: var(--haldi-cream);
+  color: var(--charcoal);
+}
+.event--haldi .kicker {
+  color: #a06f1f;
+}
+
+.event__bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+.event--sangeet .event__bg {
+  background: radial-gradient(
+    120% 80% at 50% 0%,
+    rgba(196, 154, 82, 0.18),
+    transparent 60%
+  );
+}
+.event--haldi .event__bg {
+  background: radial-gradient(
+    120% 90% at 50% 100%,
+    rgba(232, 185, 79, 0.28),
+    transparent 60%
+  );
+}
+
+.event__grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+.event__copy .kicker {
+  display: inline-block;
+  margin-bottom: 1.1rem;
+}
+.event__copy .display {
+  margin-bottom: 1.1rem;
+}
+.event__line {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.15rem, 2.2vw, 1.5rem);
+  line-height: 1.5;
+  color: var(--text-soft);
+  margin-bottom: 1.5rem;
+}
+.event--sangeet .event__line {
+  color: var(--gold-soft);
+}
+.event--haldi .event__line {
+  color: #a06f1f;
+}
+.event__meta {
+  margin-top: 2.5rem;
+}
+.event__meta .kicker {
+  line-height: 1.9;
+}
+.event__copy p:not(.event__line):not(.kicker) {
+  max-width: 30rem;
+  color: var(--text-soft);
+}
+.event--sangeet .event__copy p {
+  color: rgba(247, 240, 228, 0.72);
+}
+.event__figure {
+  display: flex;
+  justify-content: center;
+}
+.event__figure img {
+  width: min(78vw, 26rem);
+  height: auto;
+  filter: drop-shadow(0 40px 50px rgba(0, 0, 0, 0.25));
+}
+
+@media (min-width: 860px) {
+  .event__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+  .event--flip .event__grid > :first-child {
+    order: 2;
+  }
+}
+
+/* ------------------------------------------------------------
+   11. Evening journey — Sundowner → Varmala → Wedding
+   ------------------------------------------------------------ */
+.evening {
+  position: relative;
+  background: linear-gradient(
+    to bottom,
+    var(--peach) 0%,
+    #e6a07b 27%,
+    var(--terracotta) 49%,
+    var(--sindoor) 73%,
+    var(--burgundy) 94%
+  );
+  color: var(--ink);
+}
+
+.evening__block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 92vh;
+  padding: clamp(6rem, 16vh, 11rem) var(--gutter);
+}
+
+.evening__copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 46rem;
+}
+
+.evening__copy .kicker {
+  display: inline-block;
+  color: inherit;
+  opacity: 0.85;
+  margin-bottom: 1.25rem;
+}
+.evening__copy .display {
+  margin-bottom: 1.25rem;
+}
+
+.evening__line {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.2rem, 2.6vw, 1.7rem);
+  line-height: 1.5;
+  max-width: 30rem;
+  margin: 0 auto 1.5rem;
+  opacity: 0.92;
+}
+
+.evening__scene {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 1rem;
+}
+.evening__scene img {
+  width: auto;
+  max-width: min(100%, 34rem);
+  max-height: 50vh;
+  filter: drop-shadow(0 30px 40px rgba(48, 8, 12, 0.28));
+}
+.evening__scene--varmala img {
+  max-width: min(100%, 46rem);
+}
+.evening__scene--wedding img {
+  max-width: min(100%, 24rem);
+}
+
+/* Text lightens as the sky deepens */
+.evening__block--sundowner {
+  color: var(--ink);
+}
+.evening__block--varmala,
+.evening__block--wedding {
+  color: var(--ivory);
+}
+
+.evening__petals {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* ------------------------------------------------------------
+   12. Venue
+   ------------------------------------------------------------ */
+.venue {
+  background: var(--paper);
+}
+.venue__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+.venue__media {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+.venue__media img {
+  width: 100%;
+  height: auto;
+}
+.venue__cards {
+  display: grid;
+  gap: 1rem;
+}
+.venue__card {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.6rem;
+}
+.venue__card h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.venue__card p {
+  color: var(--text-soft);
+  font-size: 0.95rem;
+}
+.venue__card .kicker {
+  display: block;
+  margin-bottom: 0.6rem;
+  font-size: 0.64rem;
+}
+
+@media (min-width: 860px) {
+  .venue__grid {
+    grid-template-columns: 1.1fr 1fr;
+    gap: 4rem;
+  }
+}
+
+/* ------------------------------------------------------------
+   13. Wedding guide
+   ------------------------------------------------------------ */
+.guide {
+  background: var(--bg);
+}
+.guide__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+.guide__card {
+  position: relative;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.75rem 1.6rem;
+  overflow: hidden;
+}
+.guide__card .kicker {
+  display: inline-block;
+  font-size: 0.62rem;
+  margin-bottom: 0.7rem;
+  color: var(--gold);
+}
+.guide__card h3 {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  font-weight: 500;
+  margin-bottom: 0.6rem;
+}
+.guide__card p {
+  color: var(--text-soft);
+  font-size: 0.95rem;
+  max-width: 32rem;
+}
+.guide__motif {
+  position: absolute;
+  right: -1rem;
+  top: -1rem;
+  width: 7rem;
+  opacity: 0.08;
+  color: var(--sindoor);
+  pointer-events: none;
+}
+
+@media (min-width: 720px) {
+  .guide__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1080px) {
+  .guide__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ------------------------------------------------------------
+   14. RSVP
+   ------------------------------------------------------------ */
+.rsvp {
+  background: var(--burgundy);
+  color: var(--ivory);
+}
+.rsvp .kicker {
+  color: var(--gold-soft);
+}
+.rsvp .lead {
+  color: rgba(247, 240, 228, 0.72);
+}
+
+.rsvp-teaser {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.6rem;
+}
+.rsvp-teaser .display {
+  font-size: var(--text-display-md);
+}
+
+/* Form */
+.form {
+  display: grid;
+  gap: 1.6rem;
+}
+.form__group {
+  display: grid;
+  gap: 0.5rem;
+}
+.form__label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-soft);
+}
+.form__input,
+.form__select,
+.form__textarea {
+  width: 100%;
+  background: rgba(247, 240, 228, 0.06);
+  border: 1px solid rgba(247, 240, 228, 0.2);
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+  color: var(--ivory);
+  transition: border-color 0.3s var(--ease), background-color 0.3s var(--ease);
+}
+.form__input::placeholder,
+.form__textarea::placeholder {
+  color: rgba(247, 240, 228, 0.4);
+}
+.form__input:focus,
+.form__select:focus,
+.form__textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+  background: rgba(247, 240, 228, 0.1);
+}
+.form__select option {
+  color: var(--charcoal);
+  background: var(--paper);
+}
+.form__textarea {
+  min-height: 7rem;
+  resize: vertical;
+}
+.form__row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.4rem;
+}
+.form__seg {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+.form__chip {
+  position: relative;
+}
+.form__chip input {
+  position: absolute;
+  opacity: 0;
+  inset: 0;
+  cursor: pointer;
+}
+.form__chip span {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 1.2rem;
+  border: 1px solid rgba(247, 240, 228, 0.28);
+  border-radius: 999px;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: all 0.3s var(--ease);
+}
+.form__chip input:checked + span {
+  background: var(--ivory);
+  color: var(--burgundy);
+  border-color: var(--ivory);
+}
+.form__chip input:focus-visible + span {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+.form__note {
+  font-size: 0.8rem;
+  color: rgba(247, 240, 228, 0.55);
+}
+
+@media (min-width: 680px) {
+  .form__row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.rsvp-success {
+  text-align: center;
+  display: grid;
+  gap: 1.2rem;
+  place-items: center;
+  padding-block: 2rem;
+}
+.rsvp-success .display {
+  font-size: var(--text-display-md);
+}
+
+/* ------------------------------------------------------------
+   15. Gallery teaser
+   ------------------------------------------------------------ */
+.gallery {
+  background: var(--paper);
+}
+.gallery__teaser {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.4rem;
+}
+.gallery__teaser .display {
+  font-size: var(--text-display-md);
+  max-width: 24ch;
+  margin-inline: auto;
+}
+.gallery__qr {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--sindoor);
+  max-width: 26ch;
+}
+
+/* ------------------------------------------------------------
+   16. Footer
+   ------------------------------------------------------------ */
+.footer {
+  background: var(--burgundy-deep);
+  color: var(--ivory);
+  padding: clamp(3.5rem, 8vw, 6rem) 0 2.5rem;
+}
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+.footer__names {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 400;
+}
+.footer__meta {
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(247, 240, 228, 0.55);
+}
+.footer__amp {
+  color: var(--gold-soft);
+  font-style: italic;
+}
+.footer__foot {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(247, 240, 228, 0.12);
+  font-size: 0.72rem;
+  color: rgba(247, 240, 228, 0.4);
+  letter-spacing: 0.08em;
+}
+
+/* ------------------------------------------------------------
+   17. Sub-page shells (RSVP / Gallery / Admin)
+   ------------------------------------------------------------ */
+.page {
+  min-height: 100svh;
+  padding: 7.5rem 0 6rem;
+}
+.page__inner {
+  max-width: 44rem;
+  display: grid;
+  gap: 2.5rem;
+}
+.page__head {
+  display: grid;
+  gap: 1rem;
+}
+.page__head .display {
+  font-size: var(--text-display-lg);
+}
+.page__back {
+  font-size: 0.74rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--text-soft);
+}
+
+/* ------------------------------------------------------------
+   18. Floating RSVP control
+   ------------------------------------------------------------ */
+.float-rsvp {
+  position: fixed;
+  right: clamp(1rem, 3vw, 2rem);
+  bottom: clamp(1rem, 3vw, 2rem);
+  z-index: 50;
+  box-shadow: 0 18px 40px -16px rgba(48, 8, 12, 0.5);
+}
+.float-rsvp .btn {
+  background: var(--sindoor);
+  color: var(--ivory);
+}
+.float-rsvp .btn:hover {
+  background: var(--burgundy);
+}
+
+/* ------------------------------------------------------------
+   18. Utility / reveal animation primitives
+   ------------------------------------------------------------ */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ------------------------------------------------------------
+   19. Reduced motion
+   ------------------------------------------------------------ */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  .scroll-indicator__line::after {
+    animation: none;
+    top: 0;
+    height: 100%;
+  }
+}

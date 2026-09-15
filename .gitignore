@@ -33,10 +33,5 @@ next-env.d.ts
 # typescript
 *.tsbuildinfo
 
-# internal reference material (not part of the published site)
-/base_theme.jpeg
-/bengali wedding art.jpeg
-/closeup shot.png
-/prasid_tanuja_wedding_website_claude_brief.md
-/ref_images/
+# Windows ADS junk from files copied off a phone/cloud drive
 *:Zone.Identifier

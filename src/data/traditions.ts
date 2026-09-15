@@ -13,7 +13,7 @@ export const traditions: Tradition[] = [
     name: "Topor",
     motif: "conch",
     description:
-      "The groom arrives wearing a topor — a shola-pith crown so light it's held on by willpower and string. It means things are officially underway.",
+      "The groom arrives wearing a topor, a shola-pith crown so light it's held on by willpower and string. It means things are officially underway.",
   },
   {
     id: "shubho-drishti",
@@ -41,7 +41,7 @@ export const traditions: Tradition[] = [
     name: "Sindoor Daan",
     motif: "petal",
     description:
-      "The groom parts the bride's hair and applies sindoor — vermilion. It's the single most photographed second of the entire evening.",
+      "The groom parts the bride's hair and applies sindoor, vermilion. It's the single most photographed second of the entire evening.",
   },
   {
     id: "uludhwani",

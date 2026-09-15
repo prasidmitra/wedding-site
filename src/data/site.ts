@@ -9,8 +9,8 @@ export const site = {
   dates: {
     start: "11 December 2026",
     end: "12 December 2026",
-    short: "11 — 12 December 2026",
-    shortLabel: "11 — 12 DECEMBER 2026",
+    short: "11–12 December 2026",
+    shortLabel: "11–12 DECEMBER 2026",
   },
   venue: {
     name: "Vedic Village",

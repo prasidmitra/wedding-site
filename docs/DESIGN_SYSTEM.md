@@ -14,7 +14,7 @@ Single source of truth lives in `src/app/globals.css` (tokens) and `src/data/*` 
 --terracotta: #B95D49;  /* sunset mid */
 --turmeric:   #E8B94F;  /* haldi / marigold */
 --haldi-cream:#FAF1DD;  /* haldi ground */
---gold:       #C49A52;  /* antique gold — muted, never metallic */
+--gold:       #C49A52;  /* antique gold, muted, never metallic */
 --gold-soft:  #D9B87A;
 --charcoal:   #27211E;  /* text on light */
 --ink:        #3A2E27;  /* warm body text */
@@ -52,7 +52,7 @@ Inline SVG in `src/components/motifs.tsx` (inherit `currentColor`), mirrored as 
 ## Motion
 
 - Reveals: `Reveal` (fade + slight rise, `once`, respects reduced motion).
-- Sunset sequence: `useScroll` + `useTransform` driving background color, text color, phase opacity, and couple x-position — layered static art moved with transforms, no skeletal animation.
+- Sunset sequence: `useScroll` + `useTransform` driving background color, text color, phase opacity, and couple x-position, layered static art moved with transforms, no skeletal animation.
 - Petals: `FloatingPetals`, deterministic, `linear`, disabled under reduced motion.
 
 Rules: transform/opacity only; no springs, no bounce; `@media (prefers-reduced-motion: reduce)` collapses everything to a static, fully usable layout.

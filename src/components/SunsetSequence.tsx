@@ -8,7 +8,7 @@ const EVENING_IDS = ["sundowner", "varmala", "wedding"] as const;
 /**
  * Sundowner → Varmala → Wedding, laid out as three normal-flow sections inside
  * a single vertical gradient. As you scroll, the sky deepens from sunset peach
- * to burgundy while the copy scrolls with it — no pinned/stacked layers.
+ * to burgundy while the copy scrolls with it, no pinned/stacked layers.
  */
 export function SunsetSequence() {
   const evening = EVENING_IDS.map((id) => events.find((e) => e.id === id)!);

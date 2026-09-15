@@ -3,7 +3,7 @@ import Link from "next/link";
 import { RSVPForm } from "@/components/RSVPForm";
 
 export const metadata: Metadata = {
-  title: "RSVP — Tanuja & Prasid",
+  title: "RSVP, Tanuja & Prasid",
   description:
     "Let us know if you can join us for our wedding weekend at Vedic Village, Kolkata.",
 };
@@ -19,7 +19,7 @@ export default function RsvpPage() {
           <span className="kicker">RSVP</span>
           <h1 className="display">Join us in Kolkata</h1>
           <p className="lead">
-            The important part. A quick yes or no — it takes ten seconds.
+            The important part. A quick yes or no, it takes ten seconds.
           </p>
         </header>
 

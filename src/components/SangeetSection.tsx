@@ -20,7 +20,7 @@ export function SangeetSection() {
             <p className="event__line">{e.line}</p>
             <p>
               The night before the wedding, two families finally meet the dance
-              floor. Come in something you can move in — and bring a song
+              floor. Come in something you can move in, and bring a song
               request.
             </p>
             <div className="event__meta">

@@ -19,12 +19,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Tanuja & Prasid — 11–12 December 2026",
+  title: "Tanuja & Prasid, 11–12 December 2026",
   description:
-    "Join us for our wedding weekend — Sangeet, Haldi, Varmala and the wedding — at Vedic Village, Kolkata on 11–12 December 2026.",
+    "Join us for our wedding weekend, Sangeet, Haldi, Varmala and the wedding, at Vedic Village, Kolkata on 11–12 December 2026.",
   metadataBase: new URL("https://tanujaandprasid.wedding"),
   openGraph: {
-    title: "Tanuja & Prasid — 11–12 December 2026",
+    title: "Tanuja & Prasid, 11–12 December 2026",
     description:
       "A weekend of Sangeet, Haldi and a Bengali wedding at Vedic Village, Kolkata.",
     type: "website",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tanuja & Prasid — 11–12 December 2026",
+    title: "Tanuja & Prasid, 11–12 December 2026",
     description: "A weekend of Sangeet, Haldi and a Bengali wedding in Kolkata.",
   },
 };

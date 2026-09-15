@@ -15,7 +15,7 @@ const cards = [
   {
     kicker: "Arriving by air",
     title: "Airport & transport",
-    body: "Netaji Subhas Chandra Bose Airport (CCU) is roughly 40 minutes away. We can arrange a pickup — just note your flight in the RSVP.",
+    body: "Netaji Subhas Chandra Bose Airport (CCU) is roughly 40 minutes away. We can arrange a pickup, just note your flight in the RSVP.",
   },
   {
     kicker: "Questions",

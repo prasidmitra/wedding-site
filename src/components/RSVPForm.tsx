@@ -14,7 +14,7 @@ export function RSVPForm() {
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // No backend yet — this is where the reply would be persisted.
+    // No backend yet, this is where the reply would be persisted.
     setSubmitted(true);
   };
 
@@ -25,7 +25,7 @@ export function RSVPForm() {
         <h2 className="display">Thank you{name ? `, ${name.split(" ")[0]}` : ""}.</h2>
         <p className="lead">
           {attending === "no"
-            ? "We're sorry you can't make it — we'll raise a toast to you anyway."
+            ? "We're sorry you can't make it, we'll raise a toast to you anyway."
             : "We can't wait to see you in Kolkata."}
         </p>
       </div>

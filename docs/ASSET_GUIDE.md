@@ -1,6 +1,6 @@
 # Asset Guide
 
-The site currently runs on **aspect-correct SVG placeholders**. Final AI-generated artwork drops into the same paths with no code changes — the layout, responsive composition and animation are already built around the expected ratios.
+The site currently runs on **aspect-correct SVG placeholders**. Final AI-generated artwork drops into the same paths with no code changes, the layout, responsive composition and animation are already built around the expected ratios.
 
 ## Placeholder → final asset map
 
@@ -14,7 +14,7 @@ The site currently runs on **aspect-correct SVG placeholders**. Final AI-generat
 | `illustrations/placeholders/intro-*.svg` (reused, moved)  | `illustrations/varmala/couple-varmala-mobile.webp`   | 4:5    | scene         | Varmala (mobile)   |
 | `illustrations/placeholders/wedding-placeholder.svg`      | `illustrations/wedding/couple-wedding.webp`          | 4:5    | transparent   | Wedding            |
 | `photos/venue/venue-placeholder.svg`                      | `photos/venue/venue-desktop.webp` (+ mobile variant) | 3:2    | full photo    | Venue              |
-| —                                                          | `photos/hero/hero-desktop.webp` / `hero-mobile.webp` | 16:9 / 4:5 | full photo | Hero (optional) |
+|                                                            | `photos/hero/hero-desktop.webp` / `hero-mobile.webp` | 16:9 / 4:5 | full photo | Hero (optional) |
 
 ## Recommended artwork folder
 
@@ -40,7 +40,7 @@ public/
 ## Consistency workflow
 
 1. Generate an approved **character reference** of the couple first (`couple-style-reference.webp`) using real photographs.
-2. Reuse that reference for every event scene — never re-invent the couple per scene.
+2. Reuse that reference for every event scene, never re-invent the couple per scene.
 3. Keep characters on **transparent** backgrounds so the site can animate character, background, petals and type independently.
 
 ## Generation brief template
@@ -55,7 +55,7 @@ BACKGROUND:           Transparent.
 COMPOSITION:          Tanuja & Prasid seated/standing close together; full upper
                       bodies visible; 10–15% breathing room; nothing touching edges.
 STYLE:                (use the style reference above)
-COLOR DIRECTION:      Warm ivory, turmeric, marigold — compatible with site palette.
+COLOR DIRECTION:      Warm ivory, turmeric, marigold, compatible with site palette.
 DO NOT INCLUDE:       Text, borders, background scenery, random motifs, watermarks.
 EXPORT:               High-res transparent PNG/WebP source.
 ```

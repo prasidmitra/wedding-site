@@ -10,7 +10,7 @@ export function GalleryTeaser() {
             <span className="kicker">The Feed</span>
             <h2 className="display">You took a good photo? Prove it.</h2>
             <p className="gallery__qr">
-              A shared wedding album is coming soon — every guest&apos;s photos,
+              A shared wedding album is coming soon, every guest&apos;s photos,
               in one place.
             </p>
             <Link href="/gallery" className="btn btn--ghost">

@@ -8,7 +8,7 @@ export type Event = {
   date: string;
   time: string;
   venue: string;
-  /** Longer descriptive line — the event's "more writing". */
+  /** Longer descriptive line, the event's "more writing". */
   line: string;
 };
 

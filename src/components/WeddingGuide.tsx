@@ -20,7 +20,7 @@ export function WeddingGuide() {
             <h2 className="display display--md">A Bengali wedding, explained</h2>
             <p className="lead">
               New to all this? Here&apos;s what&apos;s happening, roughly in the
-              order it happens — and why everyone suddenly starts singing.
+              order it happens, and why everyone suddenly starts singing.
             </p>
           </div>
         </Reveal>

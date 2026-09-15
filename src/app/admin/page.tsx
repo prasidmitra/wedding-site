@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Admin — Tanuja & Prasid",
+  title: "Admin, Tanuja & Prasid",
   robots: { index: false, follow: false },
 };
 
@@ -18,8 +18,8 @@ export default function AdminPage() {
           <h1 className="display">Guest list, later</h1>
           <p className="lead">
             This area is reserved for the couple. Authentication and a private
-            RSVP dashboard — confirmed, pending, declined, meals, rooms and
-            pickups — will be added here before the wedding.
+            RSVP dashboard, confirmed, pending, declined, meals, rooms and
+            pickups, will be added here before the wedding.
           </p>
         </header>
 

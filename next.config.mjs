@@ -2,7 +2,7 @@
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 const nextConfig = {
-  // Emit a fully static site to ./out — no Node server needed to host it.
+  // Emit a fully static site to ./out, no Node server needed to host it.
   output: "export",
   reactStrictMode: true,
   basePath,

@@ -3,7 +3,7 @@ import type { SVGProps } from "react";
 /**
  * Decorative Bengali-inspired motifs as inline SVG.
  * They inherit `currentColor` so they can be tinted via CSS and
- * layered at low opacity. All are decorative — keep aria-hidden.
+ * layered at low opacity. All are decorative, keep aria-hidden.
  */
 
 type P = SVGProps<SVGSVGElement>;

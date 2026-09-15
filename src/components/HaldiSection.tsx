@@ -20,7 +20,7 @@ export function HaldiSection() {
             <p className="event__line">{e.line}</p>
             <p>
               Turmeric, marigolds, and a cheerful refusal to stay clean. This is
-              the one where everyone ends up a little yellow — wear something
+              the one where everyone ends up a little yellow, wear something
               you won&apos;t miss.
             </p>
             <div className="event__meta">

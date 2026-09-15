@@ -1,15 +1,15 @@
-# Tanuja & Prasid — Wedding Website
+# Tanuja & Prasid, Wedding Website
 
-A polished, mobile-first wedding website for **Tanuja & Prasid** — 11–12 December 2026, Vedic Village, Kolkata.
+A polished, mobile-first wedding website for **Tanuja & Prasid**, 11–12 December 2026, Vedic Village, Kolkata.
 
-Visual direction: **modern Bengali editorial luxury** — warm ivory, sindoor red, deep burgundy, muted antique gold, turmeric, sunset peach; large editorial typography; fine-line Bengali motifs (alpana, paan, marigold, conch); and illustrated versions of the couple. English text throughout.
+Visual direction: **modern Bengali editorial luxury**, warm ivory, sindoor red, deep burgundy, muted antique gold, turmeric, sunset peach; large editorial typography; fine-line Bengali motifs (alpana, paan, marigold, conch); and illustrated versions of the couple. English text throughout.
 
 ## Stack
 
 - [Next.js 16](https://nextjs.org) (App Router, Turbopack) + React 19
 - TypeScript
 - [Framer Motion](https://motion.dev) for scroll-driven motion
-- Plain CSS with design tokens (no Tailwind) — see `src/app/globals.css`
+- Plain CSS with design tokens (no Tailwind), see `src/app/globals.css`
 - Cormorant Garamond (display) + Inter (UI), self-hosted via `next/font`
 
 > Tailwind was deliberately omitted. The design is built around CSS custom properties and a bespoke editorial look; hand-written tokens kept the dependency surface small and gave finer control over the alpana/typography treatment. See `docs/DESIGN_SYSTEM.md`.
@@ -27,7 +27,7 @@ npm run preview    # serve ./out locally to check the build
 npm run typecheck  # tsc --noEmit
 ```
 
-**This is a static site.** `npm run dev` is only a development convenience. The production artifact is the `out/` folder — plain HTML, CSS, JS, fonts and images — which needs **no Node server**. Deploy `out/` to any static host (Netlify, Vercel, GitHub Pages, Cloudflare Pages, S3, nginx…) as-is.
+**This is a static site.** `npm run dev` is only a development convenience. The production artifact is the `out/` folder, plain HTML, CSS, JS, fonts and images, which needs **no Node server**. Deploy `out/` to any static host (Netlify, Vercel, GitHub Pages, Cloudflare Pages, S3, nginx…) as-is.
 
 ## Deploying to GitHub Pages
 
@@ -37,9 +37,9 @@ The site is live at **https://prasidandtanuja.xyz/** (custom domain; repo `prasi
 npm run deploy      # builds (root-relative) and pushes out/ to gh-pages
 ```
 
-The custom domain is declared in `public/CNAME` (`prasidandtanuja.xyz`), which Next.js copies into `out/` on export so the `gh-pages` branch always carries it — GitHub uses that file to keep the domain bound across the force-pushes `deploy.sh` does.
+The custom domain is declared in `public/CNAME` (`prasidandtanuja.xyz`), which Next.js copies into `out/` on export so the `gh-pages` branch always carries it, GitHub uses that file to keep the domain bound across the force-pushes `deploy.sh` does.
 
-Because the site is served from the domain root (not a project sub-path), it builds with an **empty base path** — `next.config.mjs` and `src/lib/asset.ts` still prefix with `NEXT_PUBLIC_BASE_PATH` when it is set, but that env var is unset for the live build. The older `/wedding-site/` sub-path prefixing is retained only for local `npm run dev` parity; it is not used in production.
+Because the site is served from the domain root (not a project sub-path), it builds with an **empty base path**, `next.config.mjs` and `src/lib/asset.ts` still prefix with `NEXT_PUBLIC_BASE_PATH` when it is set, but that env var is unset for the live build. The older `/wedding-site/` sub-path prefixing is retained only for local `npm run dev` parity; it is not used in production.
 
 `git push` of the source lives on `main`; the built site lives on `gh-pages` (deploy script force-pushes it).
 
@@ -49,10 +49,10 @@ When RSVP persistence and the admin dashboard arrive later, they'll be wired to 
 
 | Route      | Purpose                                                              |
 | ---------- | -------------------------------------------------------------------- |
-| `/`        | Homepage — hero → couple → weekend → events → sunset sequence → venue → guide → RSVP teaser → gallery teaser → footer |
+| `/`        | Homepage, hero → couple → weekend → events → sunset sequence → venue → guide → RSVP teaser → gallery teaser → footer |
 | `/rsvp`    | Dedicated RSVP form (also reachable from the header, hero and a floating control) |
-| `/gallery` | Shared wedding album — placeholder for now                            |
-| `/admin`   | Private dashboard — placeholder, auth/backend to be added later        |
+| `/gallery` | Shared wedding album, placeholder for now                            |
+| `/admin`   | Private dashboard, placeholder, auth/backend to be added later        |
 
 ## Project structure
 
@@ -78,8 +78,8 @@ public/
 
 The public-facing experience is fully built and responsive. Everything is content-editable from `src/data/` and `src/app/globals.css`.
 
-- **Illustrations are placeholders** — elegant aspect-correct SVGs standing in for the AI-generated couple artwork. The exact replacement assets are documented in [`docs/ASSET_GUIDE.md`](docs/ASSET_GUIDE.md).
-- **RSVP form is a shell** — the full UX is implemented (conditional fields, validation, success state) but not yet connected to a backend.
+- **Illustrations are placeholders**, elegant aspect-correct SVGs standing in for the AI-generated couple artwork. The exact replacement assets are documented in [`docs/ASSET_GUIDE.md`](docs/ASSET_GUIDE.md).
+- **RSVP form is a shell**, the full UX is implemented (conditional fields, validation, success state) but not yet connected to a backend.
 - **Admin & gallery** are placeholders for later phases.
 
 ## Roadmap
@@ -88,7 +88,7 @@ The public-facing experience is fully built and responsive. Everything is conten
 2. 🔜 Swap placeholder artwork for final illustrations (`docs/ASSET_GUIDE.md`).
 3. 🔜 RSVP persistence + private `/admin` dashboard.
 4. 🔜 Guest photo upload / moderation / mosaic gallery.
-5. 🔜 Polish pass — device matrix, reduced-motion audit, Core Web Vitals.
+5. 🔜 Polish pass, device matrix, reduced-motion audit, Core Web Vitals.
 
 ## Principles
 

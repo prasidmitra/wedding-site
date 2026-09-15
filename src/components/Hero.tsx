@@ -3,7 +3,7 @@ import { AlpanaCircle } from "@/components/motifs";
 import { rsvpHref, site } from "@/data/site";
 
 /**
- * Hero is a server component — the entrance is a pure CSS animation, so the
+ * Hero is a server component, the entrance is a pure CSS animation, so the
  * content is visible without JavaScript and respects prefers-reduced-motion.
  */
 function Fade({ delay = 0, children }: { delay?: number; children: React.ReactNode }) {

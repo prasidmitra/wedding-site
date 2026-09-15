@@ -11,7 +11,7 @@ export function RsvpTeaser() {
             <span className="kicker">Kindly reply</span>
             <h2 className="display">Will you join us?</h2>
             <p className="lead" style={{ maxWidth: "34rem" }}>
-              A quick yes or no — it takes ten seconds.
+              A quick yes or no, it takes ten seconds.
             </p>
             <Link href={rsvpHref} className="btn btn--ivory">
               RSVP

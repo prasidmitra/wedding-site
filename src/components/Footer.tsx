@@ -22,7 +22,7 @@ export function Footer() {
           </Link>
         </div>
         <p className="footer__foot">
-          With love, from Kolkata — 11–12 December 2026
+          With love, from Kolkata, 11–12 December 2026
         </p>
       </div>
     </footer>

@@ -15,15 +15,15 @@ All editable copy lives in `src/data/`. Event copy is in `src/data/events.ts`, t
 
 ## Event copy (current)
 
-- **Sangeet** — 11 December · Evening — *Music · Dance · Dinner*
-- **Haldi** — 12 December · Morning — *A little yellow. A lot of chaos.*
-- **Sundowner** — 12 December · Sunset — *The evening begins with the sun still up.*
-- **Varmala** — 12 December · Sunset — *as the sun goes down…*
-- **The Wedding** — 12 December · Evening — *A Bengali ceremony under the evening sky.*
+- **Sangeet**, 11 December · Evening, *Music · Dance · Dinner*
+- **Haldi**, 12 December · Morning, *A little yellow. A lot of chaos.*
+- **Sundowner**, 12 December · Sunset, *The evening begins with the sun still up.*
+- **Varmala**, 12 December · Sunset, *as the sun goes down…*
+- **The Wedding**, 12 December · Evening, *A Bengali ceremony under the evening sky.*
 
 ## Traditions guide
 
-Topor, Shubho Drishti, Saat Paak, Mala Badal, Sindoor Daan, Uludhwani — light conversational explanations in `src/data/traditions.ts`.
+Topor, Shubho Drishti, Saat Paak, Mala Badal, Sindoor Daan, Uludhwani, light conversational explanations in `src/data/traditions.ts`.
 
 ## After-the-wedding mode
 

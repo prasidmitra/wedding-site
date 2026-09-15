@@ -27,11 +27,11 @@ export function Introduction() {
             one wedding
           </h2>
           <p className="lead">
-            For one December weekend, everything we love about Kolkata — the
-            music, the food, the chaos, the aunties — gathers in a single place.
+            For one December weekend, everything we love about Kolkata, the
+            music, the food, the chaos, the aunties, gathers in a single place.
             We&apos;d love you there.
           </p>
-          <p className="intro__sig">— {site.couple.joined}</p>
+          <p className="intro__sig">{site.couple.joined}</p>
         </div>
 
         <div className="intro__figures" aria-label="Illustrated Tanuja and Prasid">

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500">
+  <g>
+    <circle cx="150" cy="104" r="36" fill="#F7F0E4"/>
+    <path d="M150 144 L129 176 L117 300 L117 432 L183 432 L183 300 L171 176 Z" fill="#F7F0E4"/>
+    <path d="M150 150 L150 430" stroke="#C49A52" stroke-width="2.5" opacity="0.55"/>
+    <circle cx="262" cy="118" r="33" fill="#D9B87A"/>
+    <path d="M262 154 C236 166 223 212 219 282 C215 360 211 432 262 432 C310 432 314 360 310 282 C306 212 291 166 262 154 Z" fill="#D9B87A"/>
+  </g>
+  <text x="200" y="486" text-anchor="middle" font-family="sans-serif" font-size="11" letter-spacing="2" fill="#F7F0E4" opacity="0.45">COUPLE-SANGEET · PLACEHOLDER</text>
+</svg>

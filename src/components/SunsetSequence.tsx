@@ -3,15 +3,16 @@ import { FloatingPetals } from "@/components/FloatingPetals";
 import { events } from "@/data/events";
 import { assetPath } from "@/lib/asset";
 
-const EVENING_IDS = ["sundowner", "varmala", "wedding"] as const;
+const EVENING_IDS = ["varmala", "wedding"] as const;
 
 /**
- * Sundowner → Varmala → Wedding, laid out as three normal-flow sections inside
- * a single vertical gradient. As you scroll, the sky deepens from sunset peach
- * to burgundy while the copy scrolls with it, no pinned/stacked layers.
+ * Varmala → Wedding, laid out as two normal-flow sections inside a single
+ * vertical gradient. As you scroll, the sky deepens from sunset peach to
+ * burgundy while the copy scrolls with it, no pinned/stacked layers.
  *
- * The wedding block splits into two columns (text left, illustration right)
- * like the Sangeet/Haldi sections; the earlier two blocks stay centered.
+ * The Varmala block opens on a golden sky (a nod to the sundowner) with the
+ * couple exchanging garlands; the wedding block splits into two columns
+ * (text left, illustration right) like the Sangeet/Haldi sections.
  */
 export function SunsetSequence() {
   const evening = EVENING_IDS.map((id) => events.find((e) => e.id === id)!);
@@ -86,7 +87,9 @@ export function SunsetSequence() {
               </Reveal>
             </div>
 
-            {e.id === "varmala" && <FloatingPetals color="#E8B94F" count={9} />}
+            {e.id === "varmala" && (
+              <FloatingPetals colors={["#8F1D21", "#B95D49", "#4A1115"]} count={14} />
+            )}
           </div>
         );
       })}

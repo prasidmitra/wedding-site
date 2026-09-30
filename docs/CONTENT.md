@@ -17,8 +17,7 @@ All editable copy lives in `src/data/`. Event copy is in `src/data/events.ts`, t
 
 - **Sangeet**, 11 December · Evening, *Music · Dance · Dinner*
 - **Haldi**, 12 December · Morning, *A little yellow. A lot of chaos.*
-- **Sundowner**, 12 December · Sunset, *The evening begins with the sun still up.*
-- **Varmala**, 12 December · Sunset, *as the sun goes down…*
+- **Varmala**, 12 December · Sunset, *A golden sky. Two garlands. One beautiful beginning.*
 - **The Wedding**, 12 December · Evening, *A Bengali ceremony under the evening sky.*
 
 ## Traditions guide

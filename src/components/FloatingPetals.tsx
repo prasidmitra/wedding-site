@@ -9,14 +9,19 @@ type PetalSpec = {
   duration: number;
   delay: number;
   sway: number;
+  color: string;
 };
 
-/** Deterministic, lightweight falling-petal layer. Disabled under reduced motion. */
+/**
+ * Deterministic, lightweight falling-petal layer, tinted from `colors`
+ * (assigned pseudo-randomly but deterministically so SSR and hydration agree).
+ * Disabled under reduced motion.
+ */
 export function FloatingPetals({
-  color = "#E8B94F",
+  colors = ["#E8B94F"],
   count = 8,
 }: {
-  color?: string;
+  colors?: string[];
   count?: number;
 }) {
   const reduce = useReducedMotion();
@@ -30,6 +35,7 @@ export function FloatingPetals({
       duration: 10 + ((k * 1.7) % 8),
       delay: (k * 1.3) % 6,
       sway: 8 + ((k * 5) % 14),
+      color: colors[Math.floor(k) % colors.length],
     };
   });
 
@@ -38,7 +44,7 @@ export function FloatingPetals({
       {petals.map((p, i) => (
         <motion.span
           key={i}
-          style={{ position: "absolute", left: `${p.left}%`, top: "-6%", color }}
+          style={{ position: "absolute", left: `${p.left}%`, top: "-6%", color: p.color }}
           initial={{ y: 0 }}
           animate={{ y: "106vh", x: [0, p.sway, -p.sway, 0], rotate: [0, 160, 320] }}
           transition={{

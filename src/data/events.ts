@@ -34,16 +34,6 @@ export const events: Event[] = [
     line: "A little yellow. A lot of chaos. Come for the ceremony, stay for the colour.",
   },
   {
-    id: "sundowner",
-    title: "Sundowner",
-    kicker: "12 December · Sunset",
-    note: "From golden hour to forever",
-    date: "12 December 2026",
-    time: "Evening",
-    venue: "Vedic Village, Kolkata",
-    line: "A golden sky. Our favourite people. A little pause before forever.",
-  },
-  {
     id: "varmala",
     title: "Varmala",
     kicker: "12 December · Sunset",
@@ -51,7 +41,7 @@ export const events: Event[] = [
     date: "12 December 2026",
     time: "Evening",
     venue: "Vedic Village, Kolkata",
-    line: "Two garlands. One beautiful beginning.",
+    line: "A golden sky. Two garlands. One beautiful beginning.",
   },
   {
     id: "wedding",
@@ -61,7 +51,7 @@ export const events: Event[] = [
     date: "12 December 2026",
     time: "Evening",
     venue: "Vedic Village, Kolkata",
-    line: "Surrounded by love, held by tradition. Join us for our Bengali wedding ceremony.",
+    line: "Surrounded by love, held by tradition. Join us for our Bengali wedding ceremony in your finest.",
   },
 ];
 

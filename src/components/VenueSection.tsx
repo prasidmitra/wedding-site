@@ -1,26 +1,17 @@
 import { Reveal } from "@/components/Reveal";
+import { VenueMap } from "@/components/VenueMap";
 import { assetPath } from "@/lib/asset";
 
 const cards = [
   {
     kicker: "Getting there",
     title: "Vedic Village",
-    body: "A green pocket on the edge of Kolkata, about 30 minutes from the city centre. We'll share a pinned map and driving directions closer to the date.",
-  },
-  {
-    kicker: "Staying over",
-    title: "Accommodation",
-    body: "Rooms are available on site for out-of-town guests. Mention it in your RSVP and we'll set one aside for you.",
+    body: "A green pocket on the edge of Kolkata, about 30 minutes from the city centre. Find us on the map below.",
   },
   {
     kicker: "Arriving by air",
     title: "Airport & transport",
-    body: "Netaji Subhas Chandra Bose Airport (CCU) is roughly 40 minutes away. We can arrange a pickup, just note your flight in the RSVP.",
-  },
-  {
-    kicker: "Questions",
-    title: "Guest contact",
-    body: "A family contact for the weekend will be listed here before the wedding. Until then, reach us directly through your invitation.",
+    body: "Netaji Subhas Chandra Bose Airport (CCU) is roughly 40 minutes away.",
   },
 ];
 
@@ -42,7 +33,7 @@ export function VenueSection() {
         <div className="venue__grid">
           <Reveal className="venue__media">
             <img
-              src={assetPath("/photos/venue/venue-placeholder.svg")}
+              src={assetPath("/photos/venue/venue.webp")}
               alt="Illustration of Vedic Village, Kolkata"
               loading="lazy"
             />
@@ -60,6 +51,10 @@ export function VenueSection() {
             ))}
           </div>
         </div>
+
+        <Reveal className="venue__map">
+          <VenueMap />
+        </Reveal>
       </div>
     </section>
   );

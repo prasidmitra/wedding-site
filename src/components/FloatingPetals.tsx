@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { Blossom, Petal } from "@/components/motifs";
+import { Petal } from "@/components/motifs";
 
 type PetalSpec = {
   left: number;
@@ -9,15 +9,13 @@ type PetalSpec = {
   duration: number;
   delay: number;
   sway: number;
-  shape: "petal" | "blossom";
   color: string;
 };
 
 /**
- * Deterministic, lightweight falling-petal layer: mostly the elongated `Petal`,
- * with an occasional four-petal `Blossom`, tinted from `colors` (assigned
- * pseudo-randomly but deterministically so SSR and hydration agree). Disabled
- * under reduced motion.
+ * Deterministic, lightweight falling-petal layer, tinted from `colors`
+ * (assigned pseudo-randomly but deterministically so SSR and hydration agree).
+ * Disabled under reduced motion.
  */
 export function FloatingPetals({
   colors = ["#E8B94F"],
@@ -31,14 +29,12 @@ export function FloatingPetals({
 
   const petals: PetalSpec[] = Array.from({ length: count }).map((_, i) => {
     const k = i * 37.7;
-    const shape = Math.floor(k) % 4 === 0 ? "blossom" : "petal";
     return {
       left: (k * 13) % 96,
-      size: shape === "blossom" ? 20 + ((k * 7) % 16) : 16 + ((k * 7) % 22),
+      size: 16 + ((k * 7) % 22),
       duration: 10 + ((k * 1.7) % 8),
       delay: (k * 1.3) % 6,
       sway: 8 + ((k * 5) % 14),
-      shape,
       color: colors[Math.floor(k) % colors.length],
     };
   });
@@ -58,11 +54,7 @@ export function FloatingPetals({
             ease: "linear",
           }}
         >
-          {p.shape === "blossom" ? (
-            <Blossom style={{ width: p.size }} />
-          ) : (
-            <Petal style={{ width: p.size }} />
-          )}
+          <Petal style={{ width: p.size }} />
         </motion.span>
       ))}
     </div>

@@ -88,7 +88,7 @@ export function SunsetSequence() {
             </div>
 
             {e.id === "varmala" && (
-              <FloatingPetals colors={["#8F1D21", "#B95D49", "#4A1115"]} count={14} />
+              <FloatingPetals colors={["#B95D49"]} count={14} />
             )}
           </div>
         );

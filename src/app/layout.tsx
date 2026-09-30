@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, EB_Garamond } from "next/font/google";
 import { Header } from "@/components/Header";
-import { FloatingRSVP } from "@/components/FloatingRSVP";
 import { ImageRetry } from "@/components/ImageRetry";
 import "./globals.css";
 
@@ -57,7 +56,6 @@ export default function RootLayout({
         <Header />
         <ImageRetry />
         {children}
-        <FloatingRSVP />
         <noscript>
           <style>{`[style*="opacity: 0"], [style*="opacity:0"] { opacity: 1 !important; transform: none !important; }`}</style>
         </noscript>

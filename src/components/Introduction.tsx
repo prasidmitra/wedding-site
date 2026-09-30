@@ -28,7 +28,7 @@ export function Introduction() {
           </h2>
           <p className="lead">
             For one December weekend, everything we love about Kolkata, the
-            music, the food, the chaos, the aunties, gathers in a single place.
+            music, the food, the chaos, gathers in a single place.
             We&apos;d love you there.
           </p>
           <p className="intro__sig">{site.couple.joined}</p>

@@ -11,6 +11,7 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  const onDark = pathname === rsvpHref;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -25,7 +26,7 @@ export function Header() {
 
   return (
     <>
-      <header className={cx("header", scrolled && "header--scrolled")}>
+      <header className={cx("header", scrolled && "header--scrolled", onDark && "header--on-dark")}>
         <div className="container header__inner">
           <Link href="/" className="header__brand" aria-label="Tanuja & Prasid home">
             {site.couple.joined}

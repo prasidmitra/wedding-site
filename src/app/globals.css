@@ -394,6 +394,32 @@ a {
   }
 }
 
+/* Header when sitting on a dark (burgundy) page — e.g. RSVP */
+.header--on-dark .header__brand {
+  color: var(--ivory);
+}
+.header--on-dark .header__link {
+  color: rgba(247, 240, 228, 0.72);
+}
+.header--on-dark .header__link:hover {
+  color: var(--ivory);
+}
+.header--on-dark .header__cta {
+  background: var(--ivory);
+  color: var(--burgundy);
+}
+.header--on-dark .header__cta:hover {
+  background: #fff;
+}
+.header--on-dark .menu-toggle {
+  border-color: rgba(247, 240, 228, 0.4);
+  color: var(--ivory);
+}
+.header--on-dark.header--scrolled {
+  background: color-mix(in srgb, var(--burgundy) 82%, transparent);
+  box-shadow: 0 1px 0 rgba(247, 240, 228, 0.12);
+}
+
 /* ------------------------------------------------------------
    7. Hero
    ------------------------------------------------------------ */
@@ -1300,6 +1326,12 @@ a {
   text-transform: uppercase;
   font-weight: 600;
   color: var(--text-soft);
+}
+.rsvp .page__back {
+  color: rgba(247, 240, 228, 0.78);
+}
+.rsvp .page__back:hover {
+  color: var(--ivory);
 }
 
 /* ------------------------------------------------------------

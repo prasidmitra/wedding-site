@@ -1,5 +1,5 @@
 import { Reveal } from "@/components/Reveal";
-import { Marigold } from "@/components/motifs";
+import { ConchOutline } from "@/components/motifs";
 import { events } from "@/data/events";
 import { assetPath } from "@/lib/asset";
 
@@ -9,7 +9,7 @@ export function HaldiSection() {
   return (
     <section className="section event event--haldi event--flip" id={e.id}>
       <div className="event__bg" aria-hidden>
-        <Marigold style={{ position: "absolute", left: "-2rem", bottom: "-2rem", width: "15rem", opacity: 0.16 }} />
+        <ConchOutline style={{ position: "absolute", left: "-2rem", bottom: "-2rem", width: "15rem", opacity: 0.16 }} />
       </div>
 
       <div className="container event__grid">

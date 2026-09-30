@@ -19,7 +19,7 @@ export default function GalleryPage() {
           <p className="lead">
             After the wedding, this is where the chaos lives. Guests will be
             able to upload their photos from the weekend, every angle, every
-            aunty, every dance floor moment, into one shared album.
+            dance floor moment, into one shared album.
           </p>
         </header>
       </div>

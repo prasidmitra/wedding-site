@@ -5,7 +5,6 @@ import { SangeetSection } from "@/components/SangeetSection";
 import { HaldiSection } from "@/components/HaldiSection";
 import { SunsetSequence } from "@/components/SunsetSequence";
 import { VenueSection } from "@/components/VenueSection";
-import { WeddingGuide } from "@/components/WeddingGuide";
 import { RsvpTeaser } from "@/components/RsvpTeaser";
 import { GalleryTeaser } from "@/components/GalleryTeaser";
 import { Footer } from "@/components/Footer";
@@ -20,7 +19,6 @@ export default function HomePage() {
       <HaldiSection />
       <SunsetSequence />
       <VenueSection />
-      <WeddingGuide />
       <RsvpTeaser />
       <GalleryTeaser />
       <Footer />

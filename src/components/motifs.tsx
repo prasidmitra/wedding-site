@@ -99,6 +99,23 @@ export function Petal(props: P) {
   );
 }
 
+export function Blossom(props: P) {
+  const n = 4;
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.1" aria-hidden {...props}>
+      {Array.from({ length: n }).map((_, i) => (
+        <path
+          key={i}
+          d="M12 11 C9.5 8 9.5 4 12 2 C14.5 4 14.5 8 12 11 Z"
+          transform={`rotate(${(i * 360) / n} 12 12)`}
+          strokeLinejoin="round"
+        />
+      ))}
+      <circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
 export function ConchOutline(props: P) {
   return (
     <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.2" aria-hidden {...props}>

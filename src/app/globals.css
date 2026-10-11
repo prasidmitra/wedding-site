@@ -624,7 +624,57 @@ a {
 }
 
 /* ------------------------------------------------------------
-   9. Weekend overview
+   9. Our story
+   ------------------------------------------------------------ */
+.story {
+  background: var(--ivory);
+  overflow: hidden;
+}
+.story__inner {
+  max-width: 46rem;
+  margin-inline: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.story__divider {
+  width: 15rem;
+  max-width: 70%;
+  height: auto;
+  color: var(--gold);
+  margin-bottom: 1.9rem;
+}
+.story__inner .kicker {
+  color: var(--sindoor);
+}
+.story__inner .display {
+  margin: 1.1rem 0 2.1rem;
+}
+.story__prose {
+  text-align: left;
+  max-width: 38rem;
+}
+.story__prose p {
+  font-size: 1.12rem;
+  line-height: 1.75;
+  color: var(--text);
+  margin-bottom: 1.4rem;
+}
+.story__prose p:last-child {
+  margin-bottom: 0;
+}
+.story__prose p:first-of-type::first-letter {
+  font-family: var(--font-display);
+  font-size: 3.3em;
+  line-height: 0.82;
+  float: left;
+  padding: 0.06em 0.12em 0 0;
+  color: var(--sindoor);
+}
+
+/* ------------------------------------------------------------
+   10. Weekend overview
    ------------------------------------------------------------ */
 .weekend {
   background: var(--bg);
@@ -668,7 +718,7 @@ a {
 }
 
 /* ------------------------------------------------------------
-   10. Event sections (Sangeet / Haldi)
+   11. Event sections (Sangeet / Haldi)
    ------------------------------------------------------------ */
 .event {
   position: relative;
@@ -791,7 +841,7 @@ a {
 }
 
 /* ------------------------------------------------------------
-   11. Evening journey, Varmala → Wedding
+   12. Evening journey, Varmala → Wedding
    ------------------------------------------------------------ */
 .evening {
   position: relative;
@@ -909,7 +959,7 @@ a {
 }
 
 /* ------------------------------------------------------------
-   12. Venue
+   13. Venue
    ------------------------------------------------------------ */
 .venue {
   background: var(--paper);
@@ -1047,7 +1097,7 @@ a {
 }
 
 /* ------------------------------------------------------------
-   13. Wedding guide
+   14. Wedding guide
    ------------------------------------------------------------ */
 .guide {
   background: var(--bg);
@@ -1104,7 +1154,7 @@ a {
 }
 
 /* ------------------------------------------------------------
-   14. RSVP
+   15. RSVP
    ------------------------------------------------------------ */
 .rsvp {
   background: var(--burgundy);
@@ -1237,7 +1287,7 @@ a {
 }
 
 /* ------------------------------------------------------------
-   15. Gallery teaser
+   16. Gallery teaser
    ------------------------------------------------------------ */
 .gallery {
   background: var(--paper);
@@ -1263,7 +1313,7 @@ a {
 }
 
 /* ------------------------------------------------------------
-   16. Footer
+   17. Footer
    ------------------------------------------------------------ */
 .footer {
   background: var(--burgundy-deep);
@@ -1302,7 +1352,7 @@ a {
 }
 
 /* ------------------------------------------------------------
-   17. Sub-page shells (RSVP / Gallery / Admin)
+   18. Sub-page shells (RSVP / Gallery / Admin)
    ------------------------------------------------------------ */
 .page {
   min-height: 100svh;
@@ -1335,7 +1385,7 @@ a {
 }
 
 /* ------------------------------------------------------------
-   18. Floating RSVP control
+   19. Floating RSVP control
    ------------------------------------------------------------ */
 .float-rsvp {
   position: fixed;
@@ -1353,7 +1403,7 @@ a {
 }
 
 /* ------------------------------------------------------------
-   18. Utility / reveal animation primitives
+   20. Utility / reveal animation primitives
    ------------------------------------------------------------ */
 .sr-only {
   position: absolute;
@@ -1368,7 +1418,7 @@ a {
 }
 
 /* ------------------------------------------------------------
-   19. Reduced motion
+   21. Reduced motion
    ------------------------------------------------------------ */
 @media (prefers-reduced-motion: reduce) {
   html {

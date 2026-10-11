@@ -23,9 +23,9 @@ export const site = {
 
 export const nav = [
   { label: "Our Wedding", href: "/#couple" },
+  { label: "Our Story", href: "/#story" },
   { label: "Events", href: "/#events" },
   { label: "Venue", href: "/#venue" },
-  { label: "Guide", href: "/#guide" },
 ];
 
 export const rsvpHref = "/rsvp";

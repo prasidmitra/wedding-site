@@ -21,6 +21,7 @@ export function WeekendOverview() {
               <a className="weekend__item" href={`#${e.id}`}>
                 <span className="kicker">{e.kicker}</span>
                 <h3 className="display">{e.title}</h3>
+                <span className="weekend__time">{e.time}</span>
                 <p>{e.line}</p>
               </a>
             </Reveal>

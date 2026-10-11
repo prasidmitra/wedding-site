@@ -33,7 +33,7 @@ export function SunsetSequence() {
                       <span className="kicker">
                         {e.kicker}
                         <br />
-                        {e.venue}
+                        {e.time} · {e.venue}
                       </span>
                     </div>
                   </Reveal>
@@ -81,7 +81,7 @@ export function SunsetSequence() {
                   <span className="kicker">
                     {e.kicker}
                     <br />
-                    {e.venue}
+                    {e.time} · {e.venue}
                   </span>
                 </div>
               </Reveal>

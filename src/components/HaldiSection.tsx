@@ -27,7 +27,7 @@ export function HaldiSection() {
               <span className="kicker">
                 {e.kicker}
                 <br />
-                {e.venue}
+                {e.time} · {e.venue}
               </span>
             </div>
           </Reveal>

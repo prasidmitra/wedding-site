@@ -12,9 +12,17 @@ export function OurStory() {
             <span className="kicker">{story.kicker}</span>
             <h2 className="display display--md">{story.title}</h2>
             <div className="story__prose">
-              {story.paragraphs.map((p, i) => (
-                <p key={i}>{p}</p>
-              ))}
+              {story.blocks.map((block, i) =>
+                block.type === "bullets" ? (
+                  <ul className="story__list" key={i}>
+                    {block.items.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p key={i}>{block.text}</p>
+                ),
+              )}
             </div>
           </div>
         </Reveal>

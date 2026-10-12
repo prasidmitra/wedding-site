@@ -1,15 +1,57 @@
 /**
  * The "Our Story" section copy.
- * Plain prose — each array item is one paragraph.
+ * Blocks render in order — prose paragraphs plus an optional bullet list.
  */
-export const story = {
+export type StoryBlock =
+  | { type: "paragraph"; text: string }
+  | { type: "bullets"; items: string[] };
+
+export const story: {
+  kicker: string;
+  title: string;
+  blocks: StoryBlock[];
+} = {
   kicker: "Our Story",
   title: "How we got here",
-  paragraphs: [
-    "It all started with a random friend request. To this day, neither Tanuja nor Prasid can tell you who sent it first, and both will swear on their lives that it wasn't them. Anyway, there they were, following each other on Instagram, liking stories, and quietly checking each other out. Tanuja posted salsa videos; Prasid posted guitar videos. The guitar videos were, of course, strategically targeted. Tanuja had no idea. Thanks, Zuck. Still, neither of them could quite manage a simple hello until one of Prasid's closest friends finally intervened. And just like that, the conversation began, and things went from zero to a hundred pretty quickly.",
-    "The geography was less convenient. Prasid was in Seattle, Tanuja in Bangalore, and neither was particularly excited about long distance. But the connection was too good to ignore, so Prasid booked a flight to India without telling his family. Their first trip together was to Goa, where Tanuja introduced Prasid to his first proper luxury resort experience. Tanuja, who could probably run a hospitality business on the side, knew every trick in the hotel playbook: the upgrades, the special requests, the custom-cooked meals. Prasid was genuinely awestruck. He had arrived thinking he was good at planning things. He had much to learn. Somewhere between the beaches and the absurdly good hospitality, he knew she was the one.",
-    "Back in Bangalore, the days filled up with little things that somehow became big things: long walks around Tanuja's society, sitting on a random lawn with a tiny hill, dropping into ice cream shops to try new flavours, and that time a random man on the street insisted they absolutely had to come into a comedy show. They went in, discovered he was one of the comedians, and ended up laughing their way through the evening. It was these small, ridiculous adventures that brought them closer. When Tanuja eventually came to the US, she discovered that American winter clothing involved approximately seventeen layers and that the cold was apparently a personal attack. She adjusted eventually, though the relationship with heavy jackets remains complicated. Prasid had also been saving his Universal Studios trip for someone special, so off they went to Los Angeles. There were more adventures, including Prasid repeatedly picking Tanuja up horizontally for photos, much to the awkwardness of whichever innocent bystander got recruited as photographer. They also discovered the joys of working from home in the same room, at opposite corners, both deep in intense meetings, occasionally stealing a kiss between calls to remind themselves that life existed outside the calendar.",
-    "Prasid is the sort of person who arrives with seventeen ideas, twelve of them disconnected from reality. Tanuja is usually the one who brings him back to earth, except when she decides to become a baby herself. Prasid's performance as a parent to this baby is, by his own admission, abysmal. He is working on it. He also had to figure out how to propose without giving the game away. He carried a ring sizer to India, planning to measure Tanuja's finger while she slept, then delayed the operation for so long out of fear of being caught that Tanuja eventually solved the problem herself by taking him to a jewellery shop to look at wedding rings. A few months later, atop Seattle's Space Needle, Prasid proposed. Tanuja's jaw dropped. The video made the rounds online, and some people even thought it was staged. Such is the state of the internet: apparently, even genuine surprise needs a disclaimer.",
-    "Since then, they've weathered the hard days and the distance, learned to show up for each other, and found joy in the simplest things: guitar, singing, watching shows, and turning Bangalore traffic into a makeshift cinema by wedging a phone into the back seat. They registered their marriage in December 2025, and this December, they finally get to celebrate with their favourite people. There will be music, dancing, and, almost certainly, seventeen new \"ideas\" from Prasid. Tanuja will keep him grounded. Mostly.",
+  blocks: [
+    {
+      type: "paragraph",
+      text: "Seattle and Bangalore. That’s roughly 13,000 km. If you were to ask either of us what we felt about long-distance relationships a couple years ago, we’d probably say, “No, thanks!” Yet it’s odd, and surprising, how you’ll willingly sign up to do the hardest of things for the right person.",
+    },
+    {
+      type: "paragraph",
+      text: "It all started with a random friend request one day, 2 years ago (he says she sent it first, but she disagrees; it was definitely him who sent it first), with both of us checking each other out slyly. Prasid spent nights watching Tanuja’s salsa dance videos, giddy like a 15-year-old. Sure enough, pretty soon he started posting a suspiciously high number of Guitar reels, hoping she notices them (thanks to Zuck just this one time). She did, but neither of us could still manage a simple “hello” until Prasid’s friend finally had to intervene and wingman him!",
+    },
+    {
+      type: "paragraph",
+      text: "When we finally got talking, we loved it so much we couldn’t stop! Days and nights, as we spent more time on calls, we realised how similar we were.",
+    },
+    {
+      type: "bullets",
+      items: [
+        "I love singing, and he loves playing music!",
+        "I love travelling, and she loves planning them :P",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "So, 13 thousand km away, a few weeks in, one day on a late-night video call, we decided to finally meet (and jam together on a trip to Goa).",
+    },
+    {
+      type: "paragraph",
+      text: "They say a trip will tell you everything you need to know about a person. Turns out Tanuja was moonlighting as a luxury business owner on the side (or she well could have been)! Not only did she know every in and out of a wholesome vacay experience, she was so warm, so welcoming, that Prasid felt right at home and knew immediately she was the one for him. But once back in Bangalore, it was those little conversations sitting on that one random lawn with a tiny hill, those walks to try new flavours of ice cream, and those laughs at obscure comedians that brought us closer.",
+    },
+    {
+      type: "paragraph",
+      text: "Prasid sure left feeling very warm on his trip to Bangalore, but Tanuja can’t say the same when she visited Seattle. Turns out, -10 degrees, and seventeen layers of jackets is not her idea of warmth (just because he skis, Prasid thinks the cold is amazing). The cold was a personal attack to the Bangalorean in her, and she tried her best to adjust as he took her to LA and Universal Studios (something he’d saved to do with someone special). She warmed up quickly (mostly to him) and there were a lot more photos of him picking her up for every photo, a lot of them working from home across each other, and a lot of stolen kisses in between daily stand-ups :)",
+    },
+    {
+      type: "paragraph",
+      text: "So, when he finally proposed to her on top of the Space Needle (Seattle knew it, so it was sunny for a change), Tanuja’s jaw dropped, but it was an easy yes! He is the one with 17 ideas, 90% of them disconnected from reality, and she is the one who brings him back to planet Earth (except when she becomes a baby herself). Apparently, some people thought the proposal video was staged. That’s the internet for you: even a genuine surprise needs a disclaimer these days. Let’s just say, Tanuja’s broken glasses took one for the team: they’re proof that her jaw (and her glasses) really did drop!",
+    },
+    {
+      type: "paragraph",
+      text: "The long distance and the hard days don’t seem so hard to us anymore. And it wouldn’t have been possible without our favourite people, our friends and our family. We’re celebrating, and we want you all there! There’ll be some kickass music, a lot of celebration of our Bengali culture, a little shaking of our hips, and 17 more ideas from Prasid, and Tanuja trying to keep him humble, mostly.",
+    },
   ],
 };

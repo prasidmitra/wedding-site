@@ -52,6 +52,8 @@ export const registryNote = {
   text: "Cards, cash, and in-person gifts are every bit as welcome as anything on this page. The only thing that isn't optional is you — so if a gift feels like too much, just bring your dancing shoes.",
 };
 
+export const registryComing = "More options coming very soon.";
+
 // ✏️ EDIT ME — your real Zelle / Venmo / UPI details (shared by every fund gift).
 export const usdChannel: PaymentChannel = {
   id: "usd",

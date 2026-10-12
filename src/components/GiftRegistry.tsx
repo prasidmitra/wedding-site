@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { gifts, registryIntro, deliveryAddress, registryNote } from "@/data/registry";
+import { gifts, registryIntro, deliveryAddress, registryNote, registryComing } from "@/data/registry";
 import { Marigold } from "@/components/motifs";
 
 export function GiftRegistry() {
@@ -50,6 +50,8 @@ export function GiftRegistry() {
           </li>
         ))}
       </ul>
+
+      <p className="registry__coming">{registryComing}</p>
 
       <aside className="registry__note">
         <span className="kicker">{registryNote.kicker}</span>

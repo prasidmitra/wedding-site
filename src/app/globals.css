@@ -1518,6 +1518,15 @@ a {
   color: var(--text-faint);
   letter-spacing: 0.02em;
 }
+.registry__coming {
+  margin: 0;
+  text-align: center;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--text-faint);
+}
+
 .registry__note {
   display: grid;
   gap: 0.6rem;

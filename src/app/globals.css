@@ -698,17 +698,22 @@ a {
   background: var(--sindoor);
 }
 
-/* Inline couple photos (mobile/tablet): centered editorial inserts between
-   paragraphs — no float, no text wrap, no angle. */
+/* Inline couple photos (mobile/tablet): two-up inserts between paragraphs —
+   no float, no text wrap, no angle. */
+.story__photo-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin: 0.4rem 0 2rem;
+}
 .story__photo {
   display: block;
   width: 100%;
-  max-width: 24rem;
-  margin: 0.4rem auto 2rem;
-  border-radius: 0.6rem;
-  box-shadow: 0 14px 30px rgba(39, 33, 30, 0.15);
+  aspect-ratio: 3 / 4;
   object-fit: cover;
   object-position: center 25%;
+  border-radius: 0.6rem;
+  box-shadow: 0 14px 30px rgba(39, 33, 30, 0.15);
 }
 
 /* Desktop scatter layer (hidden below the wide breakpoint). */
@@ -743,7 +748,7 @@ a {
     left: calc(50% + 28rem + var(--gap));
   }
   /* Hide the inline photos once the scatter takes over. */
-  .story__photo {
+  .story__photo-row {
     display: none;
   }
 }

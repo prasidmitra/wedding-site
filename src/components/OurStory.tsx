@@ -48,15 +48,19 @@ export function OurStory() {
                     ) : (
                       <p>{block.text}</p>
                     )}
-                    {photos.map((p) => (
-                      <img
-                        key={p.src}
-                        className={`story__photo story__photo--${p.side}`}
-                        src={p.src}
-                        alt={p.alt}
-                        loading="lazy"
-                      />
-                    ))}
+                    {photos.length > 0 && (
+                      <div className="story__photo-row">
+                        {photos.map((p) => (
+                          <img
+                            key={p.src}
+                            className="story__photo"
+                            src={p.src}
+                            alt={p.alt}
+                            loading="lazy"
+                          />
+                        ))}
+                      </div>
+                    )}
                   </Fragment>
                 );
               })}

@@ -5,9 +5,9 @@ import { assetPath } from "@/lib/asset";
  * Ordered chronologically (by capture date) so they follow the story.
  *
  * `block` is the index into `story.blocks` that the photo sits beside
- * (used for the small inline placement on mobile). `side` drives both the
- * mobile float side and the desktop gutter side; `angle`/`top`/`gap` only
- * affect the desktop scatter.
+ * (used for the inline placement on mobile, where photos render two-up).
+ * `side` drives the desktop gutter side; `angle`/`top`/`gap` only affect
+ * the desktop scatter.
  */
 export type UsPhoto = {
   src: string;
@@ -26,7 +26,7 @@ export const usPhotos: UsPhoto[] = [
   {
     src: assetPath("/photos/us/us-01.webp"),
     alt: "Tanuja and Prasid, the early days",
-    block: 1,
+    block: 2,
     side: "left",
     angle: -7,
     top: 8,
@@ -44,7 +44,7 @@ export const usPhotos: UsPhoto[] = [
   {
     src: assetPath("/photos/us/us-03.webp"),
     alt: "Tanuja and Prasid on a trip",
-    block: 4,
+    block: 5,
     side: "left",
     angle: -4,
     top: 33,
@@ -62,7 +62,7 @@ export const usPhotos: UsPhoto[] = [
   {
     src: assetPath("/photos/us/us-05.webp"),
     alt: "Tanuja and Prasid",
-    block: 5,
+    block: 6,
     side: "left",
     angle: -6,
     top: 57,
@@ -80,7 +80,7 @@ export const usPhotos: UsPhoto[] = [
   {
     src: assetPath("/photos/us/us-07.webp"),
     alt: "Tanuja and Prasid, the proposal",
-    block: 7,
+    block: 8,
     side: "left",
     angle: -5,
     top: 77,

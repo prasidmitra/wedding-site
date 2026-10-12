@@ -698,6 +698,56 @@ a {
   background: var(--sindoor);
 }
 
+/* Inline couple photos (mobile/tablet): centered editorial inserts between
+   paragraphs — no float, no text wrap, no angle. */
+.story__photo {
+  display: block;
+  width: 100%;
+  max-width: 24rem;
+  margin: 0.4rem auto 2rem;
+  border-radius: 0.6rem;
+  box-shadow: 0 14px 30px rgba(39, 33, 30, 0.15);
+  object-fit: cover;
+  object-position: center 25%;
+}
+
+/* Desktop scatter layer (hidden below the wide breakpoint). */
+.story__scatter {
+  display: none;
+}
+
+@media (min-width: 1400px) {
+  .story__scatter {
+    display: block;
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+  .story__scatter-img {
+    position: absolute;
+    top: var(--top);
+    width: clamp(9rem, 11vw, 13rem);
+    max-height: 20rem;
+    object-fit: cover;
+    object-position: center 20%;
+    border-radius: 0.4rem;
+    transform: rotate(var(--rot));
+    box-shadow: 0 14px 34px rgba(39, 33, 30, 0.18);
+  }
+  /* Sit each photo in the side gutter, a comfortable gap out from the
+     56rem text column (not hugging the text, not at the viewport edge). */
+  .story__scatter-img--left {
+    right: calc(50% + 28rem + var(--gap));
+  }
+  .story__scatter-img--right {
+    left: calc(50% + 28rem + var(--gap));
+  }
+  /* Hide the inline photos once the scatter takes over. */
+  .story__photo {
+    display: none;
+  }
+}
+
 /* ------------------------------------------------------------
    10. Weekend overview
    ------------------------------------------------------------ */

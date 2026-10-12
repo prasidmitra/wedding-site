@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675">
+  <circle cx="600" cy="250" r="120" fill="#E8B94F" opacity="0.55"/>
+  <path d="M0 560 C300 500 900 500 1200 560 L1200 675 L0 675 Z" fill="#B95D49" opacity="0.35"/>
+  <g>
+    <circle cx="470" cy="230" r="52" fill="#4A1115"/>
+    <path d="M470 286 L442 328 L426 500 L426 640 L514 640 L514 500 L498 328 Z" fill="#4A1115"/>
+    <circle cx="730" cy="246" r="48" fill="#8F1D21"/>
+    <path d="M730 300 C694 316 676 380 670 480 C665 590 660 640 730 640 C796 640 800 590 794 480 C789 380 772 316 730 300 Z" fill="#8F1D21"/>
+  </g>
+  <text x="600" y="660" text-anchor="middle" font-family="sans-serif" font-size="12" letter-spacing="3" fill="#27211E" opacity="0.4">COUPLE-VARMALA · DESKTOP PLACEHOLDER</text>
+</svg>

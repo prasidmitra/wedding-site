@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c8d9c3"/>
+      <stop offset="1" stop-color="#e9ecd9"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a9c6ae"/>
+      <stop offset="1" stop-color="#7f9f8a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="540" fill="url(#sky)"/>
+  <circle cx="920" cy="170" r="70" fill="#e8b94f" opacity="0.7"/>
+  <path d="M0 540 C200 480 340 520 520 500 C760 472 940 520 1200 470 L1200 540 Z" fill="#5f8a6b"/>
+  <rect y="540" width="1200" height="260" fill="url(#water)"/>
+  <path d="M120 640 L200 640 M980 640 L1060 640" stroke="#e7e2d2" stroke-width="2" opacity="0.5"/>
+  <text x="600" y="770" text-anchor="middle" font-family="sans-serif" font-size="14" letter-spacing="4" fill="#23402c" opacity="0.55">VEDIC VILLAGE · VENUE PLACEHOLDER</text>
+</svg>

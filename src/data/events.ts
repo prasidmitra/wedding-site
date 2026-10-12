@@ -25,13 +25,13 @@ export const events: Event[] = [
   },
   {
     id: "haldi",
-    title: "Haldi",
+    title: "Gaye Holud",
     kicker: "12 December · Morning",
     note: "A bright beginning",
     date: "12 December 2026",
     time: "9 am",
     venue: "Vedic Village, Kolkata",
-    line: "A little yellow. A lot of chaos. Come for the ceremony, stay for the colour.",
+    line: "A little yellow. Bring your shades (of color).",
   },
   {
     id: "varmala",

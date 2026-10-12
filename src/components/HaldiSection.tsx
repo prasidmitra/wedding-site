@@ -36,7 +36,7 @@ export function HaldiSection() {
         <Reveal delay={0.1} className="event__figure">
           <img
             src={assetPath("/illustrations/haldi/couple-haldi.webp")}
-            alt="Illustrated Tanuja and Prasid at the Haldi"
+            alt="Illustrated Tanuja and Prasid at the Gaye Holud"
             width={467}
             height={1088}
             loading="lazy"

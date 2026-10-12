@@ -29,9 +29,9 @@ export function Introduction() {
             weekend.
           </h2>
           <p className="lead">
-            For one December weekend, Kolkata brings the soundtrack, the food,
-            the family, and a little bit of beautiful chaos. We&apos;re getting
-            married, and it wouldn&apos;t feel like us without all of it.
+            For one December weekend, we&apos;ll bring the music, the food,
+            the family, and a little bit of beautiful chaos to Kolkata. We&apos;re
+            getting married, and it wouldn&apos;t feel like us without all of it.
           </p>
           <p className="intro__sig">{site.couple.joined}</p>
         </div>

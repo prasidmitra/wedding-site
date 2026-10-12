@@ -26,6 +26,7 @@ export const nav = [
   { label: "Our Story", href: "/#story" },
   { label: "Events", href: "/#events" },
   { label: "Venue", href: "/#venue" },
+  { label: "Gift Registry", href: "/registry" },
 ];
 
 export const rsvpHref = "/rsvp";

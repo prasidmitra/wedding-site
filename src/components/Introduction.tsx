@@ -20,16 +20,18 @@ export function Introduction() {
     <section className="section intro" id="couple">
       <div className="container intro__grid">
         <div className="intro__copy">
-          <span className="kicker">The Couple</span>
+          <span className="kicker">The couple</span>
           <h2 className="display display--lg">
-            Two people,
+            One love story.
             <br />
-            one wedding
+            A very Bengali
+            <br />
+            weekend.
           </h2>
           <p className="lead">
-            For one December weekend, everything we love about Kolkata, the
-            music, the food, the chaos, gathers in a single place.
-            We&apos;d love you there.
+            For one December weekend, Kolkata brings the soundtrack, the food,
+            the family, and a little bit of beautiful chaos. We&apos;re getting
+            married, and it wouldn&apos;t feel like us without all of it.
           </p>
           <p className="intro__sig">{site.couple.joined}</p>
         </div>

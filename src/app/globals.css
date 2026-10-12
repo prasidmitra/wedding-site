@@ -629,9 +629,10 @@ a {
 .story {
   background: var(--ivory);
   overflow: hidden;
+  padding-top: clamp(1.5rem, 4vh, 2.5rem);
 }
 .story__inner {
-  max-width: 46rem;
+  max-width: 64rem;
   margin-inline: auto;
   text-align: center;
   display: flex;
@@ -653,7 +654,7 @@ a {
 }
 .story__prose {
   text-align: left;
-  max-width: 38rem;
+  max-width: 56rem;
 }
 .story__prose p {
   font-size: 1.12rem;
@@ -678,6 +679,7 @@ a {
    ------------------------------------------------------------ */
 .weekend {
   background: var(--bg);
+  padding-bottom: clamp(1.5rem, 4vh, 2.5rem);
 }
 .weekend__list {
   display: grid;
@@ -687,6 +689,9 @@ a {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   overflow: hidden;
+}
+.weekend__cell {
+  display: grid;
 }
 .weekend__item {
   background: var(--paper);
@@ -719,7 +724,7 @@ a {
 
 @media (min-width: 720px) {
   .weekend__list {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -1163,7 +1168,7 @@ a {
    15. RSVP
    ------------------------------------------------------------ */
 .rsvp {
-  background: var(--burgundy);
+  background: var(--sindoor);
   color: var(--ivory);
 }
 .rsvp .kicker {
@@ -1388,6 +1393,320 @@ a {
 }
 .rsvp .page__back:hover {
   color: var(--ivory);
+}
+
+/* ------------------------------------------------------------
+   18b. Gift registry
+   ------------------------------------------------------------ */
+.registry {
+  background: var(--bg);
+}
+.registry__inner {
+  max-width: 62rem;
+}
+.gift-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+.gift {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.75rem 1.5rem;
+  overflow: hidden;
+}
+.gift__motif {
+  position: absolute;
+  right: -1.25rem;
+  top: -1.25rem;
+  width: 8rem;
+  height: 8rem;
+  color: var(--gold);
+  opacity: 0.12;
+  pointer-events: none;
+}
+.gift__body {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 0.7rem;
+  align-content: start;
+}
+.gift__body .kicker {
+  color: var(--sindoor);
+}
+.gift__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3.4vw, 1.9rem);
+  font-weight: 500;
+  line-height: 1.08;
+}
+.gift__blurb {
+  color: var(--text-soft);
+  font-size: 0.98rem;
+  max-width: 36rem;
+}
+.gift__actions {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 0.9rem;
+  align-content: start;
+  margin-top: auto;
+}
+.gift__buy {
+  justify-self: start;
+}
+.gift__ship {
+  font-size: 0.85rem;
+  color: var(--text-faint);
+  max-width: 30rem;
+}
+.gift__ship strong {
+  color: var(--text-soft);
+  font-weight: 600;
+}
+.gift__channels {
+  display: grid;
+  gap: 1.1rem;
+}
+.gift__channel {
+  display: grid;
+  gap: 0.6rem;
+}
+.gift__channel-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.gift__methods {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+.gift__method {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.6rem 1.15rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--text);
+  transition: border-color 0.3s var(--ease), color 0.3s var(--ease),
+    transform 0.3s var(--ease);
+}
+.gift__method:hover {
+  border-color: var(--sindoor);
+  color: var(--sindoor);
+  transform: translateY(-1px);
+}
+.gift__method-hint {
+  font-size: 0.72rem;
+  color: var(--text-faint);
+  letter-spacing: 0.02em;
+}
+.registry__note {
+  display: grid;
+  gap: 0.6rem;
+  background: var(--haldi-cream);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+}
+.registry__note .kicker {
+  color: #a06f1f;
+}
+.registry__note p {
+  color: var(--text-soft);
+  font-size: 0.95rem;
+}
+
+@media (min-width: 960px) {
+  .gift-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ------------------------------------------------------------
+   18c. Gift envelope (cash gift)
+   ------------------------------------------------------------ */
+.gift-page {
+  background: var(--bg);
+}
+.gift-page__inner {
+  max-width: 40rem;
+  justify-items: center;
+}
+.envelope {
+  position: relative;
+  width: 100%;
+  max-width: 34rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  perspective: 1000px;
+  margin-top: 0.5rem;
+}
+.envelope__flap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: clamp(5rem, 18vw, 8rem);
+  background: var(--haldi-cream);
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+  transform-origin: top center;
+  z-index: 2;
+}
+.envelope__body {
+  position: relative;
+  z-index: 1;
+  padding: clamp(6rem, 22vw, 10rem) 1.75rem 2rem;
+  min-height: 22rem;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+.envelope__seal {
+  position: absolute;
+  top: clamp(5rem, 18vw, 8rem);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  border: 2px solid rgba(247, 240, 228, 0.4);
+  background: var(--sindoor);
+  color: var(--ivory);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 14px 28px -14px rgba(48, 8, 12, 0.65);
+  transition: background-color 0.3s var(--ease), transform 0.3s var(--ease);
+}
+.envelope__seal:hover {
+  background: var(--burgundy);
+  transform: translate(-50%, -50%) scale(1.06);
+}
+.envelope__hint {
+  color: var(--text-faint);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.envelope__label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--sindoor);
+}
+.envelope__textarea {
+  width: 100%;
+  max-width: 26rem;
+  min-height: 8rem;
+  resize: vertical;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+  transition: border-color 0.3s var(--ease);
+}
+.envelope__textarea::placeholder {
+  color: var(--text-faint);
+}
+.envelope__textarea:focus {
+  outline: none;
+  border-color: var(--sindoor);
+}
+.envelope__sent {
+  display: grid;
+  gap: 0.8rem;
+  justify-items: center;
+}
+.envelope__quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.25rem, 3vw, 1.6rem);
+  line-height: 1.4;
+  color: var(--text);
+  max-width: 26rem;
+}
+.envelope__copy {
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.55rem 1.2rem;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  cursor: pointer;
+  transition: border-color 0.3s var(--ease), color 0.3s var(--ease);
+}
+.envelope__copy:hover {
+  border-color: var(--sindoor);
+  color: var(--sindoor);
+}
+.envelope__controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.envelope__controls .btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+.envelope__pay {
+  display: grid;
+  gap: 1.25rem;
+  justify-items: center;
+  text-align: center;
+  margin-top: 1rem;
+}
+.envelope__pay-title {
+  font-size: 1.9rem;
+}
+.envelope__pay .gift__channels {
+  width: 100%;
+  max-width: 30rem;
+}
+.envelope__pay .gift__channel-label {
+  text-align: center;
+}
+.envelope__pay .gift__methods {
+  justify-content: center;
+}
+.envelope__pay-note {
+  color: var(--text-faint);
+  font-size: 0.85rem;
+  max-width: 30rem;
 }
 
 /* ------------------------------------------------------------

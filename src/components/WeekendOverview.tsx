@@ -2,7 +2,9 @@ import { Reveal } from "@/components/Reveal";
 import { events, weekend } from "@/data/events";
 
 export function WeekendOverview() {
-  const highlights = events.filter((e) => ["sangeet", "haldi", "wedding"].includes(e.id));
+  const highlights = events.filter((e) =>
+    ["sangeet", "haldi", "varmala", "wedding"].includes(e.id),
+  );
 
   return (
     <section className="section weekend" id="events">
@@ -17,7 +19,7 @@ export function WeekendOverview() {
 
         <div className="weekend__list">
           {highlights.map((e, i) => (
-            <Reveal key={e.id} delay={i * 0.08}>
+            <Reveal key={e.id} delay={i * 0.08} className="weekend__cell">
               <a className="weekend__item" href={`#${e.id}`}>
                 <span className="kicker">{e.kicker}</span>
                 <h3 className="display">{e.title}</h3>

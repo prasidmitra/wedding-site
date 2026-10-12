@@ -7,7 +7,6 @@ import { HaldiSection } from "@/components/HaldiSection";
 import { SunsetSequence } from "@/components/SunsetSequence";
 import { VenueSection } from "@/components/VenueSection";
 import { RsvpTeaser } from "@/components/RsvpTeaser";
-import { GalleryTeaser } from "@/components/GalleryTeaser";
 import { Footer } from "@/components/Footer";
 
 export default function HomePage() {
@@ -15,14 +14,13 @@ export default function HomePage() {
     <main>
       <Hero />
       <Introduction />
-      <OurStory />
       <WeekendOverview />
+      <OurStory />
       <SangeetSection />
       <HaldiSection />
       <SunsetSequence />
       <VenueSection />
       <RsvpTeaser />
-      <GalleryTeaser />
       <Footer />
     </main>
   );

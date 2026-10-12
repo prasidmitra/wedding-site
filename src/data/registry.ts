@@ -54,6 +54,12 @@ export const registryNote = {
 
 export const registryComing = "More options coming very soon.";
 
+export const registryComingSoon = {
+  kicker: "Gift Registry",
+  title: "Coming very soon",
+  lead: "We're putting the finishing touches on our list of gifts. Check back soon — it'll be worth the wait.",
+};
+
 // ✏️ EDIT ME — your real Zelle / Venmo / UPI details (shared by every fund gift).
 export const usdChannel: PaymentChannel = {
   id: "usd",

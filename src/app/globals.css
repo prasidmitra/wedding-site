@@ -678,7 +678,7 @@ a {
    10. Weekend overview
    ------------------------------------------------------------ */
 .weekend {
-  background: var(--bg);
+  background: var(--peach);
   padding-bottom: clamp(1.5rem, 4vh, 2.5rem);
 }
 .weekend__list {
